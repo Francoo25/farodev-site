@@ -67,4 +67,47 @@
   } else {
     revealEls.forEach(function (el) { el.classList.add("is-visible"); });
   }
+
+  // Lightbox: click a portfolio screenshot to view it larger
+  var lightbox = document.getElementById("lightbox");
+  var lightboxImg = document.getElementById("lightbox-img");
+  var lightboxClose = document.getElementById("lightbox-close");
+  var lightboxTriggers = document.querySelectorAll("[data-lightbox-src]");
+  var lastFocused = null;
+
+  function openLightbox(src, alt, trigger) {
+    lastFocused = trigger;
+    lightboxImg.src = src;
+    lightboxImg.alt = alt || "";
+    lightbox.hidden = false;
+    requestAnimationFrame(function () { lightbox.classList.add("is-open"); });
+    document.body.style.overflow = "hidden";
+    lightboxClose.focus();
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove("is-open");
+    document.body.style.overflow = "";
+    window.setTimeout(function () {
+      lightbox.hidden = true;
+      lightboxImg.src = "";
+    }, 250);
+    if (lastFocused) lastFocused.focus();
+  }
+
+  if (lightbox && lightboxTriggers.length) {
+    lightboxTriggers.forEach(function (trigger) {
+      trigger.addEventListener("click", function () {
+        openLightbox(trigger.getAttribute("data-lightbox-src"), trigger.getAttribute("data-lightbox-alt"), trigger);
+      });
+    });
+
+    lightboxClose.addEventListener("click", closeLightbox);
+    lightbox.addEventListener("click", function (e) {
+      if (e.target === lightbox) closeLightbox();
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && !lightbox.hidden) closeLightbox();
+    });
+  }
 })();

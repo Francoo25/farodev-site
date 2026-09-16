@@ -17,3 +17,4 @@ Registro de cambios por fecha, útil para el mantenimiento mensual del sitio.
 
 - Reemplazado el placeholder "Captura pendiente" de AxionOne por tres capturas reales tomadas directamente del sistema deployado (`axiononetest.runasp.net`): pantalla de toma de pedido (imagen principal del caso de estudio), mapa de salón y reporte de ventas.
 - Agregada una galería de dos miniaturas dentro de la tarjeta de AxionOne para mostrar más de una pantalla del sistema.
+- Agregado un lightbox: las tres capturas de AxionOne se pueden ampliar con un clic (overlay oscuro, cierre con botón, clic afuera o `Escape`, foco accesible por teclado).

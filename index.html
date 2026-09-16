@@ -166,7 +166,9 @@
 
       <article class="case-study" data-reveal>
         <div class="case-media">
-          <img class="case-media-img" src="assets/img/portfolio/axionone-pos.png" alt="Pantalla de toma de pedido de AxionOne: catálogo de productos por categoría y resumen de la orden de la mesa con total y acciones de cobro">
+          <button class="case-media-trigger" type="button" data-lightbox-src="assets/img/portfolio/axionone-pos.png" data-lightbox-alt="Pantalla de toma de pedido de AxionOne: catálogo de productos por categoría y resumen de la orden de la mesa con total y acciones de cobro" aria-label="Ampliar captura de la pantalla de pedido de AxionOne">
+            <img class="case-media-img" src="assets/img/portfolio/axionone-pos.png" alt="Pantalla de toma de pedido de AxionOne: catálogo de productos por categoría y resumen de la orden de la mesa con total y acciones de cobro">
+          </button>
         </div>
         <div class="case-body">
           <p class="case-label">Producto propio de FaroDev</p>
@@ -179,11 +181,15 @@
           </ul>
           <div class="case-gallery">
             <figure>
-              <img src="assets/img/portfolio/axionone-mapa-salon.png" alt="Mapa de salón de AxionOne con el estado de cada mesa: libre u ocupada">
+              <button class="gallery-trigger" type="button" data-lightbox-src="assets/img/portfolio/axionone-mapa-salon.png" data-lightbox-alt="Mapa de salón de AxionOne con el estado de cada mesa: libre u ocupada" aria-label="Ampliar captura del mapa de salón de AxionOne">
+                <img src="assets/img/portfolio/axionone-mapa-salon.png" alt="Mapa de salón de AxionOne con el estado de cada mesa: libre u ocupada">
+              </button>
               <figcaption>Mapa de salón</figcaption>
             </figure>
             <figure>
-              <img src="assets/img/portfolio/axionone-reportes.png" alt="Reporte de ventas de AxionOne con total vendido, propinas y gráficos de método de pago y productos más vendidos">
+              <button class="gallery-trigger" type="button" data-lightbox-src="assets/img/portfolio/axionone-reportes.png" data-lightbox-alt="Reporte de ventas de AxionOne con total vendido, propinas y gráficos de método de pago y productos más vendidos" aria-label="Ampliar captura del reporte de ventas de AxionOne">
+                <img src="assets/img/portfolio/axionone-reportes.png" alt="Reporte de ventas de AxionOne con total vendido, propinas y gráficos de método de pago y productos más vendidos">
+              </button>
               <figcaption>Reportes de venta</figcaption>
             </figure>
           </div>
@@ -295,6 +301,13 @@
     <p class="footer-copy">&copy; <span id="year"></span> FaroDev &middot; Perú</p>
   </div>
 </footer>
+
+<div class="lightbox" id="lightbox" hidden>
+  <button class="lightbox-close" id="lightbox-close" type="button" aria-label="Cerrar imagen ampliada">
+    <svg class="icon" width="22" height="22"><use href="#icon-close"></use></svg>
+  </button>
+  <img class="lightbox-img" id="lightbox-img" src="" alt="">
+</div>
 
 <script src="js/main.js"></script>
 </body>

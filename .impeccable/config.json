@@ -80,6 +80,24 @@
         ],
         "createdAt": "2026-09-16T20:58:39.662Z",
         "reason": "enfasis puntual de la cita placeholder de testimonios; predate DESIGN.md"
+      },
+      {
+        "rule": "broken-image",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-09-16T21:20:43.102Z",
+        "reason": "img#lightbox-img arranca con src vacio a proposito (placeholder oculto con [hidden]); main.js le asigna el src real al abrirse, nunca se renderiza visible sin imagen"
+      },
+      {
+        "rule": "dark-glow",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-09-16T21:20:49.355Z",
+        "reason": "el shadow-lg/shadow-md del sistema (navy neutro, documentado en DESIGN.md) se reutiliza sobre el fondo oscuro del lightbox; es la misma sombra de elevacion del resto del sitio, no un glow cromatico nuevo"
       }
     ]
   }

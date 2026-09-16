@@ -68,3 +68,13 @@ Dos hallazgos del detector (`impeccable detect`) se marcaron como excepción jus
 **Decisión:** cinco valores puntuales del CSS original (radios de 4px/8px en el mockup ilustrado del hero y el scrollbar; tamaños de fuente 1.3rem/1.125rem/1.15rem en el wordmark, subtítulo del hero y cita de testimonios) se marcaron como excepción en el detector en vez de sumarlos a la escala de `DESIGN.md` o reescribirlos.
 
 **Por qué:** son valores de un solo uso, ya revisados y funcionando desde antes de escribir `DESIGN.md`. Sumarlos a la escala formal del sistema los convertiría en precedente para futuros usos que no lo ameritan (ver `document.md`: "no extraer cada token, los de un solo uso contaminan el sistema").
+
+---
+
+## 2026-09-16 - Lightbox en vez de carrusel para ver las capturas en grande
+
+**Decisión:** las capturas de AxionOne se ven en una grilla estática (imagen principal + galería de 2 miniaturas) y cada una abre un lightbox al hacer clic, en vez de convertir la galería en un carrusel.
+
+**Por qué:** el usuario pidió alguna interacción porque las imágenes se ven pequeñas en pantallas grandes. Un carrusel esconde contenido detrás de una interacción (hay que navegar para ver las otras capturas), mientras que la grilla actual ya muestra las tres de un vistazo; el lightbox resuelve el problema de tamaño sin sacrificar esa visibilidad inmediata. Con solo 3 imágenes, un carrusel sería complejidad sin beneficio real.
+
+**Cómo aplica:** `.case-media-trigger` y `.gallery-trigger` envuelven cada imagen real en un `<button>` con `data-lightbox-src`/`data-lightbox-alt`; `main.js` abre `#lightbox` con esa imagen a tamaño grande. Cierra con el botón, clic afuera, o `Escape`, y devuelve el foco al trigger original. Los placeholders "Imagen pendiente" (Ícono Creativo, negocio local) no son clicables porque no hay imagen real que ampliar.
