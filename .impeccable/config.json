@@ -35,6 +35,51 @@
         ],
         "createdAt": "2026-09-16T18:08:52.784Z",
         "reason": "false positive: static analysis merges .price-card's 1px border with .price-card--featured's box-shadow-lg, but price-card--featured explicitly sets border:none, overriding it in the cascade; verified via rendered screenshot, no visible border on the featured card"
+      },
+      {
+        "rule": "design-system-radius",
+        "value": "4px",
+        "files": [
+          "css/styles.css"
+        ],
+        "createdAt": "2026-09-16T20:58:37.150Z",
+        "reason": "radio decorativo de un solo uso dentro del mockup ilustrado del hero y del thumb del scrollbar, predate DESIGN.md; no es un componente reutilizable que amerite entrar a la escala"
+      },
+      {
+        "rule": "design-system-radius",
+        "value": "8px",
+        "files": [
+          "css/styles.css"
+        ],
+        "createdAt": "2026-09-16T20:58:37.787Z",
+        "reason": "radio decorativo de un solo uso dentro del mockup ilustrado del hero (site-hero-block), predate DESIGN.md"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "1.3rem",
+        "files": [
+          "css/styles.css"
+        ],
+        "createdAt": "2026-09-16T20:58:38.437Z",
+        "reason": "tamano del wordmark de marca (brand-word), ajustado deliberadamente para calificar como texto grande en el fix de contraste; predate DESIGN.md"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "1.125rem",
+        "files": [
+          "css/styles.css"
+        ],
+        "createdAt": "2026-09-16T20:58:39.054Z",
+        "reason": "enfasis puntual del subtitulo del hero, ligeramente mayor al body por jerarquia; predate DESIGN.md"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "1.15rem",
+        "files": [
+          "css/styles.css"
+        ],
+        "createdAt": "2026-09-16T20:58:39.662Z",
+        "reason": "enfasis puntual de la cita placeholder de testimonios; predate DESIGN.md"
       }
     ]
   }

@@ -53,7 +53,7 @@ FaroDev no es "otro diseñador de páginas bonitas": construye sistemas de softw
 - **Ícono Creativo** (portafolio, sin el mismo nivel de detalle técnico que AxionOne): sitio para productora audiovisual, enfoque visual/creativo con portafolio y galería, incluye gestión de redes sociales.
 - **Negocio local de ejemplo** (portafolio, sin el mismo nivel de detalle técnico que AxionOne): página tipo restaurante/bodega con menú, ubicación y WhatsApp directo.
 - **Pendiente:** proyecto de ejemplo en WordPress para respaldar la opción de servicio en WordPress (aún no existe).
-- **Pendiente:** screenshots reales de AxionOne e Ícono Creativo para el portafolio.
+- **Pendiente:** screenshots reales de Ícono Creativo para el portafolio (AxionOne ya tiene capturas reales tomadas del sistema deployado).
 
 ## Product Principles
 

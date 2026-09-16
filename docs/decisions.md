@@ -52,3 +52,19 @@ Dos hallazgos del detector (`impeccable detect`) se marcaron como excepción jus
 - **`repeating-stripes-gradient` (rayas del placeholder de portafolio):** patrón de rayas usado deliberadamente como "textura de imagen pendiente" (análogo al patrón de transparencia de Photoshop), no como decoración genérica.
 - **`cramped-padding` (secciones sin inset propio):** falso positivo - el detector no traza que el `.wrap` hijo aplica el padding horizontal; confirmado visualmente en capturas que el contenido no queda pegado al borde.
 - **`gpt-thin-border-wide-shadow` (tarjeta de precio destacada):** falso positivo - el análisis estático suma el borde de `.price-card` con la sombra de `.price-card--featured`, sin ver que esta última sobrescribe el borde a `none` en cascada.
+
+---
+
+## 2026-09-16 - Capturas reales de AxionOne, aspect ratio exacto en el origen
+
+**Decisión:** las capturas de AxionOne (`assets/img/portfolio/`) se tomaron a 1440x900px exactos (relación 16:10), la misma que usa `aspect-ratio` en `.case-media-img` y `.case-gallery img`.
+
+**Por qué:** un primer intento recortó las capturas a una relación distinta (1440x660, ~2.18:1) para eliminar espacio en blanco sobrante. Al forzar luego `aspect-ratio: 16/10` con `object-fit: cover`, el navegador recortaba también los costados, cortando botones reales de la interfaz (ej. "Dividir"). Capturar directamente en la proporción final evita cualquier recorte en el navegador.
+
+---
+
+## 2026-09-16 - Excepciones de escala tras escribir DESIGN.md
+
+**Decisión:** cinco valores puntuales del CSS original (radios de 4px/8px en el mockup ilustrado del hero y el scrollbar; tamaños de fuente 1.3rem/1.125rem/1.15rem en el wordmark, subtítulo del hero y cita de testimonios) se marcaron como excepción en el detector en vez de sumarlos a la escala de `DESIGN.md` o reescribirlos.
+
+**Por qué:** son valores de un solo uso, ya revisados y funcionando desde antes de escribir `DESIGN.md`. Sumarlos a la escala formal del sistema los convertiría en precedente para futuros usos que no lo ameritan (ver `document.md`: "no extraer cada token, los de un solo uso contaminan el sistema").

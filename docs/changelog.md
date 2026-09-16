@@ -10,4 +10,10 @@ Registro de cambios por fecha, útil para el mantenimiento mensual del sitio.
 - Agregado reveal-on-scroll (con fallback visible sin JavaScript) como único momento de animación del sitio.
 - Escrito `PRODUCT.md`, `DESIGN.md` y `.impeccable/design.json` a partir del brief de negocio y del sistema visual implementado.
 - Corregidos durante la verificación: contraste insuficiente del coral como texto, símbolo del logo ilegible sobre fondo navy, colapso de layout del mockup del hero en mobile, y CTA de WhatsApp ausente del header en mobile.
-- Pendiente: registrar farodev.pe, vectorizar variantes adicionales del logo si hicieran falta, definir hosting propio, conseguir screenshots reales de AxionOne e Ícono Creativo, armar ejemplo en WordPress para el portafolio.
+- Pendiente: registrar farodev.pe, vectorizar variantes adicionales del logo si hicieran falta, definir hosting propio, conseguir screenshots reales de Ícono Creativo, armar ejemplo en WordPress para el portafolio.
+- Publicado en GitHub Pages: https://francoo25.github.io/farodev-site/
+
+## 2026-09-16 - Capturas reales de AxionOne
+
+- Reemplazado el placeholder "Captura pendiente" de AxionOne por tres capturas reales tomadas directamente del sistema deployado (`axiononetest.runasp.net`): pantalla de toma de pedido (imagen principal del caso de estudio), mapa de salón y reporte de ventas.
+- Agregada una galería de dos miniaturas dentro de la tarjeta de AxionOne para mostrar más de una pantalla del sistema.
