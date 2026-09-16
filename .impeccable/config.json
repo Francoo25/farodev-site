@@ -1,0 +1,41 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "overused-font",
+        "value": "plus jakarta sans",
+        "createdAt": "2026-09-16T18:06:45.355Z",
+        "reason": "user confirmed: PRODUCT.md/docs/brief.md pin Plus Jakarta Sans as the approved body typeface"
+      },
+      {
+        "rule": "repeating-stripes-gradient",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-09-16T18:06:45.808Z",
+        "reason": "domain-appropriate placeholder hatch pattern signaling missing portfolio screenshots, not decoration"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-09-16T18:08:52.338Z",
+        "reason": "false positive: .section has no direct horizontal padding but its .wrap child applies padding-inline: var(--space-sm); verified via rendered screenshot that content is inset from viewport edges"
+      },
+      {
+        "rule": "gpt-thin-border-wide-shadow",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-09-16T18:08:52.784Z",
+        "reason": "false positive: static analysis merges .price-card's 1px border with .price-card--featured's box-shadow-lg, but price-card--featured explicitly sets border:none, overriding it in the cascade; verified via rendered screenshot, no visible border on the featured card"
+      }
+    ]
+  }
+}

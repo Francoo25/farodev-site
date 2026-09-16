@@ -1,0 +1,60 @@
+:root {
+  /* Color */
+  --color-navy: #0e2340;
+  --color-navy-soft: #16345c;
+  --color-teal: #1fa97c;
+  --color-teal-deep: #157b5c;
+  --color-coral: #ff6b4a;
+  --color-coral-deep: #e5502f;
+  --color-gray-600: #5a6472;
+  --color-gray-300: #c7ccd3;
+  --color-cream: #fafaf8;
+  --color-white: #ffffff;
+
+  --color-bg: var(--color-cream);
+  --color-surface: var(--color-white);
+  --color-text: var(--color-navy);
+  --color-text-secondary: var(--color-gray-600);
+  --color-border: #e4e1da;
+
+  /* Type */
+  --font-display: "Archivo", -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-body: "Plus Jakarta Sans", -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  --text-display: clamp(2.25rem, 1.7rem + 2.4vw, 2.75rem);
+  --text-h2: clamp(1.5rem, 1.3rem + 0.9vw, 1.75rem);
+  --text-h3: 1.25rem;
+  --text-body: 1.0625rem;
+  --text-body-sm: 0.9375rem;
+  --text-caption: 0.8125rem;
+
+  --tracking-tight: -0.03em;
+  --tracking-snug: -0.015em;
+
+  /* Space */
+  --space-3xs: 0.25rem;
+  --space-2xs: 0.5rem;
+  --space-xs: 0.75rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+  --space-2xl: 6rem;
+  --space-3xl: 8rem;
+
+  /* Shape */
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-pill: 999px;
+
+  /* Shadow: offset + soft blur, never a zero-offset halo */
+  --shadow-sm: 0 2px 8px rgba(14, 35, 64, 0.06);
+  --shadow-md: 0 8px 24px rgba(14, 35, 64, 0.1);
+  --shadow-lg: 0 20px 48px rgba(14, 35, 64, 0.16);
+
+  --measure: 62ch;
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-md: 0.6s;
+}

@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-16T18:35:06Z",
+  "title": "Design System: FaroDev",
+  "extensions": {
+    "colorMeta": {
+      "navy-profundo": { "role": "primary", "displayName": "Navy Profundo", "canonical": "#0e2340", "tonalRamp": ["#050c17", "#0b1c30", "#0e2340", "#16345c", "#274a78", "#4a6a96", "#8b9fbb", "#c9d3e1"] },
+      "navy-profundo-soft": { "role": "primary", "displayName": "Navy Profundo Soft", "canonical": "#16345c" },
+      "verde-brujula": { "role": "secondary", "displayName": "Verde Brújula", "canonical": "#1fa97c", "tonalRamp": ["#062e21", "#0d5138", "#157b5c", "#1fa97c", "#4fc09a", "#84d6bb", "#b8e9d8", "#e4f6ee"] },
+      "verde-brujula-deep": { "role": "secondary", "displayName": "Verde Brújula Deep", "canonical": "#157b5c" },
+      "coral-senal": { "role": "tertiary", "displayName": "Coral Señal", "canonical": "#ff6b4a", "tonalRamp": ["#4a1408", "#7f2411", "#b3391c", "#e5502f", "#ff6b4a", "#ff8d72", "#ffb29e", "#ffdbd0"] },
+      "coral-senal-deep": { "role": "tertiary", "displayName": "Coral Señal Deep", "canonical": "#e5502f" },
+      "neutral-cream": { "role": "neutral", "displayName": "Crema", "canonical": "#fafaf8" },
+      "neutral-white": { "role": "neutral", "displayName": "Blanco", "canonical": "#ffffff" },
+      "neutral-text-secondary": { "role": "neutral", "displayName": "Gray 600", "canonical": "#5a6472" },
+      "neutral-border-strong": { "role": "neutral", "displayName": "Gray 300", "canonical": "#c7ccd3" },
+      "neutral-border": { "role": "neutral", "displayName": "Border", "canonical": "#e4e1da" }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "H1 del hero únicamente." },
+      "headline": { "displayName": "Headline", "purpose": "H2 de cada sección." },
+      "title": { "displayName": "Title", "purpose": "H3 dentro de tarjetas." },
+      "body": { "displayName": "Body", "purpose": "Párrafos generales, medida objetivo 62ch." },
+      "label": { "displayName": "Label", "purpose": "Captions, badges, tags de tecnología." }
+    },
+    "shadows": [
+      { "name": "shadow-sm", "value": "0 2px 8px rgba(14, 35, 64, 0.06)", "purpose": "Botones en reposo." },
+      { "name": "shadow-md", "value": "0 8px 24px rgba(14, 35, 64, 0.1)", "purpose": "Hover de botón, panel de menú móvil abierto, ícono de about." },
+      { "name": "shadow-lg", "value": "0 20px 48px rgba(14, 35, 64, 0.16)", "purpose": "Tarjeta de precio destacada y mockups flotantes del hero." }
+    ],
+    "motion": [
+      { "name": "ease-out-expo", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Easing único del sistema: hover de botones y reveal de entrada." },
+      { "name": "duration-md", "value": "0.6s", "purpose": "Duración del reveal de entrada por sección." }
+    ],
+    "breakpoints": [
+      { "name": "tablet", "value": "900px" },
+      { "name": "mobile-nav", "value": "760px" },
+      { "name": "mobile-sm", "value": "520px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "CTA principal (WhatsApp): pill coral con texto navy, eleva en hover.",
+      "html": "<a class=\"ds-btn-primary\" href=\"#\">Solicita tu cotización gratis</a>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; gap: 0.5rem; background: #ff6b4a; color: #0e2340; font-weight: 600; font-size: 1.0625rem; text-decoration: none; padding: 0.9rem 1.75rem; border-radius: 999px; box-shadow: 0 2px 8px rgba(14,35,64,0.06); transition: transform 0.25s cubic-bezier(0.16,1,0.3,1), box-shadow 0.25s cubic-bezier(0.16,1,0.3,1); } .ds-btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(14,35,64,0.1); } .ds-btn-primary:focus-visible { outline: 2px solid #ff6b4a; outline-offset: 3px; }"
+    },
+    {
+      "name": "Chip (business type)",
+      "kind": "chip",
+      "refersTo": "chip-selected",
+      "description": "Selector pill de tipo de negocio; estado seleccionado en navy, no seleccionado en blanco.",
+      "html": "<label class=\"ds-chip ds-chip--selected\"><span>Restaurante</span></label><label class=\"ds-chip\"><span>Tienda / bodega</span></label>",
+      "css": ".ds-chip span { display: inline-flex; padding: 0.55rem 1rem; border-radius: 999px; border: 1.5px solid #e4e1da; font-size: 0.9375rem; font-weight: 600; color: #5a6472; cursor: pointer; transition: background 0.2s cubic-bezier(0.16,1,0.3,1), border-color 0.2s cubic-bezier(0.16,1,0.3,1), color 0.2s cubic-bezier(0.16,1,0.3,1); } .ds-chip--selected span { background: #0e2340; border-color: #0e2340; color: #ffffff; }"
+    },
+    {
+      "name": "Pricing Card (featured)",
+      "kind": "card",
+      "refersTo": "card-price-featured",
+      "description": "Tarjeta de precio central, elevada y en navy — el único punto focal permanente de la grilla de precios.",
+      "html": "<article class=\"ds-price-card ds-price-card--featured\"><p class=\"ds-price-badge\">Más pedido</p><h3>Estándar</h3><p class=\"ds-price-value\">S/ 1,000 <span>&ndash; 1,800</span></p></article>",
+      "css": ".ds-price-card--featured { background: #0e2340; color: #ffffff; border-radius: 16px; padding: 2.5rem; position: relative; box-shadow: 0 20px 48px rgba(14,35,64,0.16); transform: translateY(-0.75rem); } .ds-price-badge { position: absolute; top: -0.7rem; left: 2.5rem; background: #ff6b4a; color: #0e2340; font-size: 0.8125rem; font-weight: 700; padding: 0.25rem 0.75rem; border-radius: 999px; } .ds-price-value { font-family: Archivo, sans-serif; font-weight: 900; font-size: 1.75rem; }"
+    },
+    {
+      "name": "Standard Card",
+      "kind": "card",
+      "refersTo": "card-standard",
+      "description": "Tarjeta blanca con borde sutil, usada en precios estándar y portafolio.",
+      "html": "<article class=\"ds-card\"><h3>Básico</h3><p>Tu presencia digital en una sola página.</p></article>",
+      "css": ".ds-card { background: #ffffff; border: 1px solid #e4e1da; border-radius: 16px; padding: 2.5rem; }"
+    },
+    {
+      "name": "Navigation link",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Enlace de navegación con subrayado coral animado en hover.",
+      "html": "<a class=\"ds-nav-link\" href=\"#servicios\">Servicios</a>",
+      "css": ".ds-nav-link { text-decoration: none; font-weight: 600; font-size: 0.9375rem; color: #5a6472; position: relative; padding-block: 0.25rem; } .ds-nav-link::after { content: ''; position: absolute; left: 0; right: 100%; bottom: -2px; height: 2px; background: #ff6b4a; transition: right 0.3s cubic-bezier(0.16,1,0.3,1); } .ds-nav-link:hover { color: #0e2340; } .ds-nav-link:hover::after { right: 0; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "El Compás Técnico",
+    "overview": "FaroDev se presenta como un compás, no como un vitrinero de plantillas: el sistema visual traduce precisión técnica real (sistemas de negocio, integraciones fiscales) en una superficie cercana y sin pretensiones corporativas. El navy profundo ancla el sistema con autoridad y legibilidad; el coral funciona como una única señal de acción clara en cada pantalla, nunca como decoración repetida. Las formas son suaves y redondeadas (nunca angulosas ni neobrutalistas), porque la confianza técnica no necesita sonar fría. El sistema rechaza explícitamente: gradientes de texto, íconos genéricos tipo emoji, kickers/eyebrows sobre títulos, y cualquier imitación de screenshot real donde no existe evidencia real todavía.",
+    "keyCharacteristics": [
+      "Navy como ancla tipográfica y de fondo; coral como única señal de acción por pantalla.",
+      "Esquinas generosas (16-24px) y sombras suaves con offset, nunca halos planos.",
+      "Superficies planas en reposo; la elevación aparece como respuesta (hover, tarjeta destacada).",
+      "Tipografía display de alto contraste (Archivo 900) contra cuerpo de lectura cómoda (Plus Jakarta Sans)."
+    ],
+    "rules": [
+      { "name": "La Regla de la Señal Única", "body": "El coral aparece como máximo una vez por viewport como fondo de acción. Todo lo demás que quiera destacar usa peso tipográfico, tamaño, o el navy/verde.", "section": "colors" },
+      { "name": "La Regla del Texto Coral Oscuro", "body": "El coral nunca es color de texto directo sobre fondo claro (falla contraste). Cuando se necesita 'sensación coral' en texto, se usa Coral Señal Deep.", "section": "colors" },
+      { "name": "La Regla Sin Kicker", "body": "Ningún encabezado lleva una etiqueta/eyebrow encima. El propio H2 lleva el peso semántico.", "section": "typography" },
+      { "name": "La Regla de la Elevación Merecida", "body": "Ningún elemento lleva shadow-lg solo por decoración; se reserva para el elemento que ya es el punto focal de su sección.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do usar Coral Señal Deep (no el coral base) cuando el coral aparece como texto sobre fondo claro.",
+      "Do reservar el coral de fondo para una única acción por pantalla.",
+      "Do mantener las superficies planas en reposo y reservar la sombra para hover o para el elemento focal fijo de la sección.",
+      "Do usar esquinas redondeadas (mínimo 10px) en todo control interactivo."
+    ],
+    "donts": [
+      "Don't usar texto blanco sobre coral o verde brújula (falla contraste AA).",
+      "Don't agregar kickers/eyebrows sobre encabezados.",
+      "Don't simular screenshots reales de portafolio: cuando no hay evidencia real, se marca explícitamente como 'pendiente'.",
+      "Don't usar sombras de offset cero (halo plano) en ningún componente; toda sombra lleva offset + blur suave."
+    ]
+  }
+}
