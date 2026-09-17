@@ -78,3 +78,18 @@ Dos hallazgos del detector (`impeccable detect`) se marcaron como excepción jus
 **Por qué:** el usuario pidió alguna interacción porque las imágenes se ven pequeñas en pantallas grandes. Un carrusel esconde contenido detrás de una interacción (hay que navegar para ver las otras capturas), mientras que la grilla actual ya muestra las tres de un vistazo; el lightbox resuelve el problema de tamaño sin sacrificar esa visibilidad inmediata. Con solo 3 imágenes, un carrusel sería complejidad sin beneficio real.
 
 **Cómo aplica:** `.case-media-trigger` y `.gallery-trigger` envuelven cada imagen real en un `<button>` con `data-lightbox-src`/`data-lightbox-alt`; `main.js` abre `#lightbox` con esa imagen a tamaño grande. Cierra con el botón, clic afuera, o `Escape`, y devuelve el foco al trigger original. Los placeholders "Imagen pendiente" (Ícono Creativo, negocio local) no son clicables porque no hay imagen real que ampliar.
+
+---
+
+## 2026-09-16 - Estudio de interacción de Smultron (referencia de layout del brief)
+
+**Decisión:** se hizo scroll-through programático (Playwright) e inspección de CSS/JS en vivo de smultron.software para extraer patrones reales de interacción, no solo su composición visual. Se adoptaron 4 patrones: header oculto al bajar/visible al subir, flecha deslizante en botones con ícono de flecha, zoom de imagen en hover de tarjetas de portafolio, y una sección de "tecnologías" en grid/tira.
+
+**Por qué:** `docs/brief.md` ya nombraba a Smultron como referencia de layout desde el brief original; el usuario pidió estudiar puntualmente su dinamismo e interacciones (ver memoria `feedback_reference_urls_workflow`).
+
+**Cómo aplica:**
+- Header: `main.js` compara `window.scrollY` contra el valor anterior en cada frame (`requestAnimationFrame`); si baja y ya pasó los 160px iniciales, agrega `.site-header--hidden` (`transform: translateY(-100%)`); si sube, la quita. Se desactiva mientras el menú móvil está abierto.
+- Flecha: `.icon-nudge` en el ícono de flecha del CTA principal del hero, con `transform: translateX(3px)` en `.btn:hover`.
+- Zoom: `.case-media-trigger` y `.gallery-trigger` ahora tienen `overflow: hidden`, y su `<img>` escala a `1.05-1.06` en hover/focus-visible.
+
+**Descartado:** marquee infinito para la tira de tecnologías (el patrón real de Smultron, usado para su carrusel de logos de clientes). El detector de diseño lo marcó como problema real: con solo 6 tags de contenido fijo (no logos de clientes que cambian), el scroll infinito esconde información sin necesidad en vez de mostrarla completa. Se implementó como fila estática (`flex-wrap`) que muestra los 6 tags de una vez y se envuelve en mobile.

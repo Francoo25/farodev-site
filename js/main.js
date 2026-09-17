@@ -110,4 +110,29 @@
       if (e.key === "Escape" && !lightbox.hidden) closeLightbox();
     });
   }
+
+  // Header: hide on scroll down, reveal on scroll up
+  var siteHeader = document.querySelector(".site-header");
+  if (siteHeader) {
+    var lastScrollY = window.scrollY;
+    var headerTicking = false;
+    window.addEventListener("scroll", function () {
+      if (!headerTicking) {
+        window.requestAnimationFrame(function () {
+          var currentY = window.scrollY;
+          var navIsOpen = mainNav && mainNav.classList.contains("is-open");
+          if (!navIsOpen) {
+            if (currentY > lastScrollY && currentY > 160) {
+              siteHeader.classList.add("site-header--hidden");
+            } else {
+              siteHeader.classList.remove("site-header--hidden");
+            }
+          }
+          lastScrollY = currentY;
+          headerTicking = false;
+        });
+        headerTicking = true;
+      }
+    }, { passive: true });
+  }
 })();

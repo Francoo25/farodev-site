@@ -18,3 +18,12 @@ Registro de cambios por fecha, útil para el mantenimiento mensual del sitio.
 - Reemplazado el placeholder "Captura pendiente" de AxionOne por tres capturas reales tomadas directamente del sistema deployado (`axiononetest.runasp.net`): pantalla de toma de pedido (imagen principal del caso de estudio), mapa de salón y reporte de ventas.
 - Agregada una galería de dos miniaturas dentro de la tarjeta de AxionOne para mostrar más de una pantalla del sistema.
 - Agregado un lightbox: las tres capturas de AxionOne se pueden ampliar con un clic (overlay oscuro, cierre con botón, clic afuera o `Escape`, foco accesible por teclado).
+
+## 2026-09-16 - Dinamismo inspirado en Smultron
+
+- Estudiada la interacción real (scroll-through + inspección de CSS/JS) de smultron.software, la referencia de layout original del proyecto.
+- Agregado: header que se oculta al hacer scroll hacia abajo y reaparece al subir.
+- Agregado: flecha deslizante en el CTA principal del hero al hacer hover.
+- Agregado: zoom de imagen en hover para la captura principal de AxionOne y las miniaturas de la galería.
+- Agregada la sección "Tecnologías" (.NET 10, EF Core, SQL Server, SUNAT · UBL 2.1, Razor + React, Multi-local) entre el portafolio y "Sobre FaroDev".
+- Descartado: marquee infinito para la tira de tecnologías (el detector de diseño lo marcó como problema real de legibilidad con contenido fijo de solo 6 items); se implementó como fila estática que se envuelve en mobile.
