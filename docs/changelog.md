@@ -27,3 +27,9 @@ Registro de cambios por fecha, útil para el mantenimiento mensual del sitio.
 - Agregado: zoom de imagen en hover para la captura principal de AxionOne y las miniaturas de la galería.
 - Agregada la sección "Tecnologías" (.NET 10, EF Core, SQL Server, SUNAT · UBL 2.1, Razor + React, Multi-local) entre el portafolio y "Sobre FaroDev".
 - Descartado: marquee infinito para la tira de tecnologías (el detector de diseño lo marcó como problema real de legibilidad con contenido fijo de solo 6 items); se implementó como fila estática que se envuelve en mobile.
+
+## 2026-09-16 - Captura real de "Negocio local" en el portafolio
+
+- Reemplazado el placeholder "Imagen pendiente" de la tarjeta "Negocio local" por una captura real del hero de La Caleta Cevichería (ya construida y publicada como proyecto independiente).
+- La tarjeta ahora abre la captura en el lightbox y agrega un enlace "Ver sitio" al proyecto real.
+- "Ícono Creativo" sigue con el placeholder: ese proyecto está en pausa hasta recibir logo, tipografía y prototipo de la marca real.

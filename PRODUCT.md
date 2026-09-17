@@ -51,9 +51,9 @@ FaroDev no es "otro diseñador de páginas bonitas": construye sistemas de softw
 
 - **AxionOne** (caso de estudio con evidencia técnica completa, confirmado): POS multi-tenant para restaurantes, producto propio de FaroDev. Problema: restaurantes necesitaban un punto de venta que cumpliera con facturación electrónica SUNAT y manejara múltiples locales desde un solo sistema. Solución: POS en .NET 10 + EF Core, frontend híbrido Razor/React, integración SUNAT (UBL 2.1), gestión multi-local.
 - **Ícono Creativo** (portafolio, sin el mismo nivel de detalle técnico que AxionOne): sitio para productora audiovisual, enfoque visual/creativo con portafolio y galería, incluye gestión de redes sociales.
-- **Negocio local de ejemplo** (portafolio, sin el mismo nivel de detalle técnico que AxionOne): página tipo restaurante/bodega con menú, ubicación y WhatsApp directo.
+- **Negocio local de ejemplo** ("La Caleta Cevichería", construido y publicado en https://francoo25.github.io/la-caleta-cevicheria/): página tipo restaurante con menú, ubicación y WhatsApp directo. Portafolio de FaroDev ya muestra captura real con enlace al sitio.
 - **Pendiente:** proyecto de ejemplo en WordPress para respaldar la opción de servicio en WordPress (aún no existe).
-- **Pendiente:** screenshots reales de Ícono Creativo para el portafolio (AxionOne ya tiene capturas reales tomadas del sistema deployado).
+- **Pendiente:** construir Ícono Creativo (en pausa hasta recibir logo, tipografía y prototipo de la marca real).
 
 ## Product Principles
 

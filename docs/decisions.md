@@ -93,3 +93,11 @@ Dos hallazgos del detector (`impeccable detect`) se marcaron como excepción jus
 - Zoom: `.case-media-trigger` y `.gallery-trigger` ahora tienen `overflow: hidden`, y su `<img>` escala a `1.05-1.06` en hover/focus-visible.
 
 **Descartado:** marquee infinito para la tira de tecnologías (el patrón real de Smultron, usado para su carrusel de logos de clientes). El detector de diseño lo marcó como problema real: con solo 6 tags de contenido fijo (no logos de clientes que cambian), el scroll infinito esconde información sin necesidad en vez de mostrarla completa. Se implementó como fila estática (`flex-wrap`) que muestra los 6 tags de una vez y se envuelve en mobile.
+
+---
+
+## 2026-09-16 - Captura real de "Negocio local" reemplazando el placeholder
+
+**Decisión:** la tarjeta "Negocio local" del portafolio usa ahora una captura real del hero de `la-caleta-cevicheria` (proyecto hermano ya publicado), en vez del placeholder rayado, con el mismo patrón de lightbox + zoom en hover que AxionOne, más un enlace "Ver sitio" al proyecto real.
+
+**Por qué:** el negocio de ejemplo ya existe como sitio construido y publicado (ver `la-caleta-cevicheria` en GitHub); mantener el placeholder ahí sería desactualizar el portafolio a propósito. "Ícono Creativo" mantiene su placeholder porque ese proyecto sigue sin construirse (en pausa por assets de marca pendientes del cliente).

@@ -392,6 +392,42 @@ a { color: inherit; }
 .case-media-trigger:focus-visible .case-media-img {
   transform: scale(1.05);
 }
+.portfolio-media-trigger {
+  display: block;
+  width: 100%;
+  position: relative;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: zoom-in;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+.portfolio-media-trigger::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-md);
+  background: rgba(14, 35, 64, 0.1);
+  opacity: 0;
+  transition: opacity 0.2s var(--ease-out-expo);
+}
+.portfolio-media-trigger:hover::after,
+.portfolio-media-trigger:focus-visible::after {
+  opacity: 1;
+}
+.portfolio-media-img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: top;
+  border-radius: var(--radius-md);
+  transition: transform 0.4s var(--ease-out-expo);
+}
+.portfolio-media-trigger:hover .portfolio-media-img,
+.portfolio-media-trigger:focus-visible .portfolio-media-img {
+  transform: scale(1.06);
+}
 .case-media-placeholder,
 .portfolio-media {
   aspect-ratio: 16 / 10;
