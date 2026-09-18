@@ -34,7 +34,7 @@ export default function Header() {
     >
       <div className={`wrap ${styles.inner}`}>
         <a className={styles.brand} href="#top" aria-label="FaroDev, inicio">
-          <img className={styles.brandMark} src="/assets/img/logo/farodev-symbol.svg" alt="" width="34" height="34" />
+          <img className={styles.brandMark} src={`${import.meta.env.BASE_URL}assets/img/logo/farodev-symbol.svg`} alt="" width="34" height="34" />
           <span className={styles.brandWord}>
             Faro<em>Dev</em>
           </span>
@@ -47,9 +47,24 @@ export default function Header() {
           <NavLink href="#contacto">Contacto</NavLink>
         </nav>
 
-        <a className={`btn btn-coral ${styles.headerCta}`} href={WHATSAPP_DEFAULT_LINK} target="_blank" rel="noopener">
+        <motion.a
+          className={`btn btn-coral ${styles.headerCta}`}
+          href={WHATSAPP_DEFAULT_LINK}
+          target="_blank"
+          rel="noopener"
+          initial="rest"
+          whileHover="hover"
+          animate="rest"
+        >
           Cotización gratis
-        </a>
+          <motion.span
+            className={styles.ctaNudge}
+            variants={{ rest: { x: 0 }, hover: { x: 3 } }}
+            transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
+          >
+            <Icon name="arrow" size={16} />
+          </motion.span>
+        </motion.a>
 
         <button
           className={styles.navToggle}
@@ -77,9 +92,26 @@ export default function Header() {
               <a href="#portafolio" onClick={() => setMenuOpen(false)}>Portafolio</a>
               <a href="#nosotros" onClick={() => setMenuOpen(false)}>Nosotros</a>
               <a href="#contacto" onClick={() => setMenuOpen(false)}>Contacto</a>
-              <a className="btn btn-coral" href={WHATSAPP_DEFAULT_LINK} target="_blank" rel="noopener" onClick={() => setMenuOpen(false)}>
+              <motion.a
+                className="btn btn-coral"
+                href={WHATSAPP_DEFAULT_LINK}
+                target="_blank"
+                rel="noopener"
+                onClick={() => setMenuOpen(false)}
+                initial="rest"
+                whileHover="hover"
+                whileTap="hover"
+                animate="rest"
+              >
                 Cotización gratis
-              </a>
+                <motion.span
+                  className={styles.ctaNudge}
+                  variants={{ rest: { x: 0 }, hover: { x: 3 } }}
+                  transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
+                >
+                  <Icon name="arrow" size={16} />
+                </motion.span>
+              </motion.a>
             </div>
           </motion.nav>
         )}

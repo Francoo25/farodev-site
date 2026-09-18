@@ -6,7 +6,7 @@ export default function About() {
     <section id="nosotros" className="section">
       <div className={`wrap ${styles.grid}`}>
         <Reveal as="div" className={styles.mark}>
-          <img src="/assets/img/logo/farodev-symbol.svg" alt="" width="120" height="120" />
+          <img src={`${import.meta.env.BASE_URL}assets/img/logo/farodev-symbol.svg`} alt="" width="120" height="120" />
         </Reveal>
         <Reveal as="div">
           <h2 className={styles.heading}>

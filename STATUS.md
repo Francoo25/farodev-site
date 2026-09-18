@@ -42,16 +42,26 @@ Sitio de portafolio y servicios de **FaroDev**, negocio de Franco Reategui dedic
 
 **Sitio propio de FaroDev:** React + Vite + Framer Motion (proyecto fuente en `/web`), compilado a HTML/CSS/JS estático que se publica desde la raíz del repo - sigue sin backend ni WordPress, solo cambió de "escrito a mano" a "compilado con un bundler" para poder usar Framer Motion y componentes de 21st.dev/magic (ver `TOOLS.md`). La versión anterior sin build step queda archivada como referencia histórica (sección 7).
 
-Correrlo localmente (sitio ya compilado):
+El sitio se publica como GitHub Pages de **proyecto** (`https://francoo25.github.io/farodev-site/`, no dominio raíz ni custom domain), así que `base` en `web/vite.config.js` está fijado a `/farodev-site/` y todas las rutas a imágenes usan `import.meta.env.BASE_URL` en vez de rutas absolutas `/assets/...` - si se sirve alguna vez desde un dominio propio o subpath distinto, este valor hay que actualizarlo (ver `docs/decisions.md`).
+
+Correr el sitio ya compilado localmente (debe respetar el `base`, `http.server` en la raíz sirve las rutas mal):
 ```
-python -m http.server 8000
+cd ..
+npx serve -l 4173 .
+# abrir http://localhost:4173/farodev-site/
 ```
 
-Para modificar el sitio y recompilar:
+Para modificar el sitio con recarga en vivo:
 ```
 cd web
 npm install
-npm run build    # sobrescribe index.html y /bundle en la raíz
+npm run dev    # abre en http://localhost:5173/farodev-site/ (respeta el base)
+```
+
+Para recompilar y publicar los cambios:
+```
+cd web
+npm run build    # sobrescribe index.html, /bundle y /assets en la raíz
 ```
 
 **Estructura:**
@@ -59,14 +69,13 @@ npm run build    # sobrescribe index.html y /bundle en la raíz
 farodev-site/
 ├── index.html             → sitio publicado (generado, no editar a mano)
 ├── bundle/                 → JS/CSS compilados (generado, no editar a mano)
+├── assets/img/             → generado por el build a partir de web/public/assets/img (no editar a mano)
 ├── web/                     → proyecto fuente: React + Vite + Framer Motion
+│   ├── public/assets/img/     → fuente real de las imágenes (logo, portafolio) - editar aquí, no en /assets de la raíz
 │   └── src/
 │       ├── components/        → secciones del home (Hero, Services, Portfolio, etc.)
 │       ├── styles/             → tokens.css (copia de DESIGN.md) + global.css
 │       └── data/content.js     → copy y datos reutilizados
-├── assets/img/
-│   ├── logo/            → símbolo y wordmark de FaroDev
-│   └── portfolio/       → screenshots reales del portafolio
 ├── archive/                → snapshot autocontenido de la versión anterior (histórico)
 ├── PRODUCT.md            → contexto de negocio, usuarios y posicionamiento
 ├── DESIGN.md              → sistema de diseño (colores, tipografía, componentes)
@@ -167,6 +176,14 @@ Regla de producto: **nunca fabricar evidencia** - testimonios y casos sin desarr
 - Ampliado el contenedor principal a `1600px/48px` (antes `1180px/24px`), medido con Playwright contra smultron.software.
 - Corregidos antes de la promoción: mockup del hero sin rotación/puntos de ventana/color teal del original, checks teal en vez de coral en la tarjeta de precio destacada, footer con fondo navy que tapaba el símbolo del logo, ícono de WhatsApp en negro puro (`fill` sin `currentColor`) en vez del navy del botón.
 - `PRODUCT.md` (Stack) y `README.md` (estructura) actualizados para reflejar React + Vite como stack real y publicado.
+
+**2026-09-18 - Fix de pantalla en blanco en producción + ajustes de hero y header**
+- **Bug crítico:** el sitio publicado se veía en blanco. Causa: `web/vite.config.js` tenía `base: '/'`, pero GitHub Pages sirve este repo como página de *proyecto* en `https://francoo25.github.io/farodev-site/`, no en la raíz del dominio - el navegador buscaba `/bundle/...` en `francoo25.github.io/bundle/...` (404) en vez de bajo `/farodev-site/`. Corregido con `base: '/farodev-site/'` y reemplazando toda ruta absoluta a `/assets/...` (en JSX y en `index.html`) por `import.meta.env.BASE_URL` / `%BASE_URL%`. Verificado con Playwright sirviendo el build en un subpath local, sin requests fallidos.
+- **Fix relacionado:** `assets/img` vivía en la raíz del repo, fuera de `web/public`, así que en `npm run dev` las imágenes daban 404 (el dev server de Vite solo sirve estáticos desde `web/public`) aunque sí funcionaban en producción (el build las copiaba a la raíz). Movido a `web/public/assets/img` como única fuente real; el build lo sigue copiando a `/assets` en la raíz para el deploy.
+- Hero: aumentado el tamaño del stack de tarjetas (mockup "AxionOne · POS" + "Negocio local") de `max-width: 360px` a `600px` y ajustado el solape entre ambas (`.deviceFront` con `top`/`left` en vez de `bottom: 0`) para que se vean superpuestas en vez de separadas por el crecimiento del contenedor.
+- Reducido el padding vertical de todas las secciones (`--space-2xl` → `--space-xl`, de 96px a 64px por lado) para un scroll menos espaciado.
+- Agregada la animación de flecha (hover nudge, Framer Motion) al CTA "Cotización gratis" del header y del menú móvil - antes no tenían ícono ni ningún feedback de interacción, a diferencia del CTA del hero.
+- Todo verificado con Playwright en desktop/tablet/mobile (1600px, 900px, 390px) antes de cada confirmación, siguiendo la regla de `TOOLS.md` de usar Playwright para cualquier navegación/inspección real, no solo capturas estáticas.
 
 ---
 

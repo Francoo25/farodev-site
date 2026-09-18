@@ -7,12 +7,12 @@ import { axionGallery } from '../data/content.js'
 import styles from './Portfolio.module.css'
 
 const AXION_MAIN = {
-  src: '/assets/img/portfolio/axionone-pos.png',
+  src: `${import.meta.env.BASE_URL}assets/img/portfolio/axionone-pos.png`,
   alt: 'Pantalla de toma de pedido de AxionOne: catálogo de productos por categoría y resumen de la orden de la mesa con total y acciones de cobro',
 }
 
 const NEGOCIO_LOCAL = {
-  src: '/assets/img/portfolio/negocio-local-hero.png',
+  src: `${import.meta.env.BASE_URL}assets/img/portfolio/negocio-local-hero.png`,
   alt: 'Hero de La Caleta Cevichería: título en tipografía de tiza sobre fondo de pizarra, con CTA de WhatsApp',
 }
 

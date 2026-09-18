@@ -68,12 +68,12 @@ export const businessTypes = [
 
 export const axionGallery = [
   {
-    src: '/assets/img/portfolio/axionone-mapa-salon.png',
+    src: `${import.meta.env.BASE_URL}assets/img/portfolio/axionone-mapa-salon.png`,
     alt: 'Mapa de salón de AxionOne con el estado de cada mesa: libre u ocupada',
     caption: 'Mapa de salón',
   },
   {
-    src: '/assets/img/portfolio/axionone-reportes.png',
+    src: `${import.meta.env.BASE_URL}assets/img/portfolio/axionone-reportes.png`,
     alt: 'Reporte de ventas de AxionOne con total vendido, propinas y gráficos de método de pago y productos más vendidos',
     caption: 'Reportes de venta',
   },

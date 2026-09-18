@@ -7,7 +7,7 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className={`wrap ${styles.inner}`}>
         <a className={styles.brand} href="#top" aria-label="FaroDev, inicio">
-          <img src="/assets/img/logo/farodev-symbol.svg" alt="" width="28" height="28" />
+          <img src={`${import.meta.env.BASE_URL}assets/img/logo/farodev-symbol.svg`} alt="" width="28" height="28" />
           <span className={styles.brandWord}>
             Faro<em>Dev</em>
           </span>
