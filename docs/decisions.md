@@ -101,3 +101,31 @@ Dos hallazgos del detector (`impeccable detect`) se marcaron como excepción jus
 **Decisión:** la tarjeta "Negocio local" del portafolio usa ahora una captura real del hero de `la-caleta-cevicheria` (proyecto hermano ya publicado), en vez del placeholder rayado, con el mismo patrón de lightbox + zoom en hover que AxionOne, más un enlace "Ver sitio" al proyecto real.
 
 **Por qué:** el negocio de ejemplo ya existe como sitio construido y publicado (ver `la-caleta-cevicheria` en GitHub); mantener el placeholder ahí sería desactualizar el portafolio a propósito. "Ícono Creativo" mantiene su placeholder porque ese proyecto sigue sin construirse (en pausa por assets de marca pendientes del cliente).
+
+---
+
+## 2026-09-17 - Build Vite + React acotado a /web y /draft, para poder usar Framer Motion y 21st.dev/magic
+
+**Decisión:** se introdujo un proyecto Vite + React en `/web` (con `framer-motion`), que compila directamente a `/draft` (`vite.config.js`: `build.outDir: "../draft"`, `build.assetsDir: "bundle"`), para reconstruir el home siguiendo `TOOLS.md`. El `index.html` original permanece intacto en la raíz y sigue siendo el sitio publicado hasta que se confirme el reemplazo; el snapshot previo queda además archivado en `archive/index-v1.html` (ver `archive/README.md`).
+
+**Por qué:** `TOOLS.md` exige usar la skill de Framer Motion y el MCP de 21st.dev/magic para animaciones y componentes de UI, pero ambas herramientas son de React - el sitio original es HTML/CSS/JS plano sin build step (decisión registrada arriba, el 2026-09-16, y en `PRODUCT.md`). El usuario, al pedir explícitamente esta reconstrucción con esas herramientas, eligió resolver el choque introduciendo el build step solo para esta nueva versión, en vez de reescribir esas herramientas en vanilla JS. El proyecto estático original no cambia de stack mientras el draft no se confirme como reemplazo - si se confirma, la sección "Stack" de `PRODUCT.md` deberá actualizarse en ese momento.
+
+**Cómo aplica:** `web/src/components/*` usa `motion.*` de `framer-motion` para todas las animaciones (reveal-on-scroll vía `whileInView`, header oculto/visible, hover nudge del CTA, zoom de imágenes del portafolio, transición del menú móvil y del lightbox) - ninguna animación CSS a mano, como pide `TOOLS.md`. Los tokens de `DESIGN.md` se reutilizan tal cual copiando `css/tokens.css` a `web/src/styles/tokens.css`, sin redecidir paleta ni tipografía. Los componentes de 21st.dev/magic (Hero con stagger de texto, grilla de pricing con tarjeta destacada) se usaron como referencia estructural/de interacción y se reimplementaron a mano con los tokens de FaroDev, no se copiaron tal cual (vienen en Tailwind/shadcn, stack que este proyecto no usa).
+
+---
+
+## 2026-09-17 - Contenedor `.wrap` ampliado a 1600px/48px, medido en smultron.software con Playwright
+
+**Decisión:** el ancho máximo del contenedor (`.wrap`, en `web/src/styles/global.css`) pasó de `1180px`/`1.5rem` a `1600px`/`3rem` (padding vuelve a `1.5rem` solo en mobile, `≤640px`). Aplicado por ahora solo en `/web` (draft); la v1 archivada mantiene su ancho original.
+
+**Por qué:** el usuario notó que smultron.software - la referencia de layout original del proyecto (ver `docs/brief.md` sección 2.1 y la entrada de "Dinamismo inspirado en Smultron" arriba) - usa bastante más ancho de pantalla que nuestro `.wrap`. Se midió con Playwright (`getBoundingClientRect` del contenedor principal en varios anchos de viewport) en vez de estimarlo a ojo: `max-width: 1632px`, `padding: 48px` por lado, fijo por encima de ~1750px de viewport (confirmado con viewports de 1280 a 1920px). Se adoptó `1600px`/`3rem` como versión redondeada. `DESIGN.md` (sección Layout) queda actualizado con el nuevo valor y esta nota de origen.
+
+---
+
+## 2026-09-17 - v2 (Vite + React) confirmado como sitio oficial, v1 retirado a archivo
+
+**Decisión:** tras una ronda de revisión visual comparando v1 (`archive/index-v1.html`) contra el draft en `/draft` (verificación con Playwright, capturas y comparación directa contra la versión publicada), el usuario confirmó reemplazar el sitio publicado. Se reconfiguró `web/vite.config.js` para compilar directamente a la raíz del repo (`build.outDir: ".."`, `build.assetsDir: "bundle"`, `base: "/"`, `emptyOutDir: false` a propósito - la raíz tiene archivos del repo que el build nunca debe borrar). Se eliminaron el `index.html`/`css/`/`js/` originales de la raíz (ya preservados en `archive/`), la carpeta `/draft` (staging ya no necesario) y las herramientas de comparación `/preview` + `preview.bat` (cumplieron su propósito).
+
+**Por qué:** el draft pasó verificación funcional (Playwright: sin errores de consola, lightbox/menú/scroll/formulario funcionando en desktop y mobile) y visual (paridad con v1 en cada punto donde había diferencia notada: mockup del hero, tarjetas de precio, footer, íconos) - documentado en las entradas de esta sección y en el historial de la sesión. `PRODUCT.md` (sección Stack) queda actualizado para reflejar React + Vite como stack real del sitio.
+
+**Cómo aplica:** de ahora en adelante, cualquier cambio al home se hace editando `web/src/` y corriendo `npm run build` dentro de `/web` - eso sobrescribe `index.html` y `/bundle` en la raíz directamente. `archive/index-v1.html` queda como referencia histórica de la versión anterior, no se vuelve a tocar ni se sirve.

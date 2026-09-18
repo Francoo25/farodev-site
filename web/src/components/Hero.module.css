@@ -1,0 +1,183 @@
+.hero {
+  padding-block: var(--space-2xl) var(--space-xl);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+  align-items: center;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: var(--text-display);
+  line-height: 1.05;
+  letter-spacing: var(--tracking-tight);
+  max-width: 14ch;
+  color: var(--color-navy);
+}
+
+.title span {
+  color: var(--color-coral-deep);
+}
+
+.subtitle {
+  margin-top: var(--space-sm);
+  font-size: 1.15rem;
+  color: var(--color-text-secondary);
+  max-width: 42ch;
+}
+
+.actions {
+  margin-top: var(--space-md);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.ctaBtn {
+  gap: 0.6rem;
+}
+
+.nudge {
+  display: inline-flex;
+}
+
+.visual {
+  display: flex;
+  justify-content: center;
+}
+
+.deviceStack {
+  position: relative;
+  width: 100%;
+  max-width: 360px;
+  aspect-ratio: 4 / 5;
+}
+
+.device {
+  position: absolute;
+  width: 78%;
+  border-radius: var(--radius-lg);
+  background: var(--color-navy);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+}
+
+.deviceBack {
+  top: 0;
+  right: 0;
+  transform: rotate(4deg);
+  z-index: 1;
+}
+
+.deviceFront {
+  bottom: 0;
+  left: 0;
+  transform: rotate(-3deg);
+  z-index: 2;
+}
+
+.deviceBar {
+  height: 1.75rem;
+  background: rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  padding-inline: 0.7rem;
+}
+
+.deviceBar::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-coral);
+  box-shadow: 14px 0 0 var(--color-teal), 28px 0 0 rgba(255, 255, 255, 0.3);
+}
+
+.deviceBody {
+  padding: var(--space-md);
+  color: var(--color-white);
+}
+
+.deviceTag {
+  display: inline-block;
+  font-size: var(--text-caption);
+  font-weight: 600;
+  color: var(--color-teal);
+  margin-bottom: var(--space-sm);
+}
+
+.deviceBodySite {
+  background: var(--color-white);
+  color: var(--color-navy);
+}
+
+.deviceBodySite .deviceTag {
+  color: var(--color-teal-deep);
+}
+
+.posRow {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.6rem;
+}
+
+.posRow span:first-child {
+  flex: 2.5;
+  height: 10px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.posRow span:last-child {
+  flex: 1;
+  height: 10px;
+  border-radius: 4px;
+  background: var(--color-coral);
+  opacity: 0.8;
+}
+
+.posTotal {
+  margin-top: var(--space-sm);
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 1.3rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--color-coral);
+}
+
+.siteHeroBlock {
+  height: 48px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--color-navy), var(--color-navy-soft));
+  margin-bottom: var(--space-sm);
+}
+
+.siteLine {
+  height: 8px;
+  border-radius: 4px;
+  background: var(--color-border);
+  margin-bottom: 0.5rem;
+}
+
+.siteLineShort {
+  width: 60%;
+}
+
+.siteBtn {
+  margin-top: var(--space-xs);
+  width: 40%;
+  height: 22px;
+  border-radius: 999px;
+  background: var(--color-coral);
+}
+
+@media (min-width: 900px) {
+  .grid {
+    grid-template-columns: 1.05fr 0.95fr;
+  }
+}

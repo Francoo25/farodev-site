@@ -143,7 +143,9 @@ Paleta de tres acentos sobre una base neutra cálida (crema, no blanco puro), pe
 
 ## Layout
 
-Contenedor centrado en `max-width: 1180px` con padding lateral `1.5rem` (`.wrap`), reutilizado dentro de cada `<section>` para dar el inset horizontal - las secciones en sí solo controlan el padding vertical (`--space-2xl` = 6rem entre secciones). El sitio es de una sola página con scroll y navegación por anclas.
+Contenedor centrado en `max-width: 1600px` con padding lateral `3rem` (`1.5rem` en mobile, `≤640px`) (`.wrap`), reutilizado dentro de cada `<section>` para dar el inset horizontal - las secciones en sí solo controlan el padding vertical (`--space-2xl` = 6rem entre secciones). El sitio es de una sola página con scroll y navegación por anclas.
+
+**Nota de origen (2026-09-17):** el ancho se amplió de la medida original (`1180px` / `1.5rem`, usada en la v1 estática archivada) tras medir con Playwright el contenedor real de smultron.software (`max-width: 1632px`, padding `48px`, fijo por encima de ~1750px de viewport) - la referencia de layout original del proyecto. Se adoptó `1600px`/`3rem` como versión redondeada, aplicada primero en la reconstrucción con Vite + React (`/web`, ver `docs/decisions.md`).
 
 Grillas de dos columnas (hero, about, contacto) colapsan a una columna en `900px`. La navegación principal se sustituye por un menú desplegable a partir de `760px`. El ritmo vertical sigue la escala de espaciado de `3xs` (0.25rem) a `3xl` (8rem), y el bloque de precios usa una tarjeta central elevada (`translateY(-0.75rem)`) que vuelve a la línea base en mobile.
 

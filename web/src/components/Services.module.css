@@ -1,0 +1,121 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+}
+
+.card {
+  position: relative;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.featured {
+  background: var(--color-navy);
+  color: var(--color-white);
+  border: none;
+  box-shadow: var(--shadow-lg);
+}
+
+.badge {
+  position: absolute;
+  top: -0.85rem;
+  left: var(--space-lg);
+  background: var(--color-coral);
+  color: var(--color-navy);
+  font-weight: 700;
+  font-size: var(--text-caption);
+  padding: 0.3rem 0.8rem;
+  border-radius: var(--radius-pill);
+}
+
+.card h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-h3);
+}
+
+.desc {
+  margin-top: 0.5rem;
+  font-size: var(--text-body-sm);
+  opacity: 0.85;
+  min-height: 3.4em;
+}
+
+.value {
+  margin-top: var(--space-md);
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 1.75rem;
+}
+
+.value span {
+  font-size: 1rem;
+  font-weight: 600;
+  opacity: 0.7;
+}
+
+.time {
+  margin-top: 0.2rem;
+  font-size: var(--text-caption);
+  color: var(--color-teal-deep);
+  font-weight: 600;
+}
+
+.featured .time {
+  color: var(--color-teal);
+}
+
+.features {
+  margin-top: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.features li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: var(--text-body-sm);
+}
+
+.features li svg {
+  color: var(--color-teal);
+  flex-shrink: 0;
+}
+
+.featured .features li svg {
+  color: var(--color-coral);
+}
+
+.maintenance {
+  margin-top: var(--space-lg);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--color-text-secondary);
+  font-size: var(--text-body-sm);
+}
+
+.maintenance svg {
+  color: var(--color-teal);
+}
+
+.maintenance strong {
+  color: var(--color-navy);
+}
+
+@media (min-width: 760px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+  }
+
+  .featured {
+    transform: translateY(-0.75rem);
+  }
+}

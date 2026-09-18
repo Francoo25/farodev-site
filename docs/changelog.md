@@ -33,3 +33,10 @@ Registro de cambios por fecha, útil para el mantenimiento mensual del sitio.
 - Reemplazado el placeholder "Imagen pendiente" de la tarjeta "Negocio local" por una captura real del hero de La Caleta Cevichería (ya construida y publicada como proyecto independiente).
 - La tarjeta ahora abre la captura en el lightbox y agrega un enlace "Ver sitio" al proyecto real.
 - "Ícono Creativo" sigue con el placeholder: ese proyecto está en pausa hasta recibir logo, tipografía y prototipo de la marca real.
+
+## 2026-09-17 - Reconstrucción del home con React + Vite + Framer Motion, confirmada como sitio oficial
+
+- Reconstruido el home completo en un proyecto Vite + React (`/web`), usando Framer Motion para toda la animación (reveal-on-scroll, header oculto/visible al hacer scroll, hover del CTA, zoom del portafolio, menú móvil, lightbox) y componentes de 21st.dev/magic como referencia estructural para el hero y las tarjetas de precio.
+- Ampliado el contenedor principal de `1180px/24px` a `1600px/48px` de padding lateral, después de medir con Playwright el ancho real usado por smultron.software (referencia de layout del proyecto).
+- Corregidos varios detalles visuales para mantener paridad con la versión anterior: mockup del hero (rotación, puntos de "ventana", color teal), checks coral en la tarjeta de precio destacada, fondo del footer (el símbolo del logo se perdía sobre navy), color del ícono de WhatsApp (usaba negro por defecto del SVG en vez de heredar el navy del botón).
+- Confirmado como sitio publicado: la versión anterior (HTML/CSS/JS plano, sin build step) queda archivada en `archive/index-v1.html` como referencia histórica. De ahora en adelante los cambios al home se hacen en `web/src/` y se compilan con `npm run build`.

@@ -8,7 +8,7 @@ web
 
 ## Stack
 
-Static HTML/CSS/JS, sin WordPress ni framework. Es un sitio de una sola marca sin necesidad de que terceros editen contenido desde un panel; un sitio estático es más rápido de construir, más liviano y sin costos ni mantenimiento de plugins/hosting de WordPress. (WordPress sí se ofrece como opción de paquete para clientes de FaroDev que necesiten autonomía de contenido, pero eso es un servicio distinto, no el stack de este sitio.)
+React + Vite (proyecto fuente en `/web`), compilado a HTML/CSS/JS estático que se sirve desde la raíz del repo (sin backend, sin WordPress) - GitHub Pages sigue sirviendo archivos planos, el build solo pasó a generarse con un bundler en vez de escribirse a mano. Se adoptó este stack para poder usar Framer Motion (animaciones) y el catálogo de componentes de 21st.dev/magic, ambos de React (ver `TOOLS.md` y `docs/decisions.md`, entradas del 2026-09-17). La versión estática original sin build step (HTML/CSS/JS plano) queda archivada en `archive/index-v1.html` como referencia histórica, ya no es el sitio publicado. (WordPress sí se ofrece como opción de paquete para clientes de FaroDev que necesiten autonomía de contenido, pero eso es un servicio distinto, no el stack de este sitio.)
 
 ## Users
 

@@ -1,0 +1,19 @@
+.placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+  text-align: center;
+  padding-block: var(--space-lg);
+  color: var(--color-text-secondary);
+}
+
+.placeholder svg {
+  color: var(--color-teal);
+}
+
+.placeholder p {
+  font-size: 1.1rem;
+  font-style: italic;
+  max-width: 32ch;
+}
