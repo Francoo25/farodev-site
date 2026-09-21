@@ -2,16 +2,16 @@
 // Fuente de verdad del contenido: docs/brief.md y el index.html original
 // (archive/index-v1.html). No se cambia el copy en esta reconstrucción visual.
 
-const WHATSAPP_NUMBER = '51942348968'
+const WHATSAPP_NUMBER = '51943402701'
 
 export const WHATSAPP_DEFAULT_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
-  'Hola FaroDev, quiero cotizar una página web para mi negocio.',
+  'Hola FaroDevs, quiero cotizar una página web para mi negocio.',
 )}`
 
 export const WHATSAPP_BASE_LINK = `https://wa.me/${WHATSAPP_NUMBER}`
 
 export function whatsappQuoteLink(businessType) {
-  const text = `Hola FaroDev, tengo ${businessType} y quiero cotizar mi página web.`
+  const text = `Hola FaroDevs, tengo ${businessType} y quiero cotizar mi página web.`
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`
 }
 

@@ -30,7 +30,7 @@ Registro de decisiones puntuales tomadas durante el desarrollo, para no repetir 
 
 ## 2026-09-16 - Símbolo del logo sobre fondo claro, no navy
 
-**Decisión:** en la sección "Sobre FaroDev", el símbolo del logo se muestra dentro de una caja de fondo blanco/crema, no navy.
+**Decisión:** en la sección "Sobre FaroDevs", el símbolo del logo se muestra dentro de una caja de fondo blanco/crema, no navy.
 
 **Por qué:** el símbolo tiene su propia mitad navy (ver `assets/img/logo/farodev-symbol.svg`). Sobre un fondo navy, esa mitad se funde con el fondo y solo queda visible un triángulo coral suelto, irreconocible como marca. Detectado visualmente en la ronda de verificación con capturas de pantalla.
 
@@ -110,7 +110,7 @@ Dos hallazgos del detector (`impeccable detect`) se marcaron como excepción jus
 
 **Por qué:** `TOOLS.md` exige usar la skill de Framer Motion y el MCP de 21st.dev/magic para animaciones y componentes de UI, pero ambas herramientas son de React - el sitio original es HTML/CSS/JS plano sin build step (decisión registrada arriba, el 2026-09-16, y en `PRODUCT.md`). El usuario, al pedir explícitamente esta reconstrucción con esas herramientas, eligió resolver el choque introduciendo el build step solo para esta nueva versión, en vez de reescribir esas herramientas en vanilla JS. El proyecto estático original no cambia de stack mientras el draft no se confirme como reemplazo - si se confirma, la sección "Stack" de `PRODUCT.md` deberá actualizarse en ese momento.
 
-**Cómo aplica:** `web/src/components/*` usa `motion.*` de `framer-motion` para todas las animaciones (reveal-on-scroll vía `whileInView`, header oculto/visible, hover nudge del CTA, zoom de imágenes del portafolio, transición del menú móvil y del lightbox) - ninguna animación CSS a mano, como pide `TOOLS.md`. Los tokens de `DESIGN.md` se reutilizan tal cual copiando `css/tokens.css` a `web/src/styles/tokens.css`, sin redecidir paleta ni tipografía. Los componentes de 21st.dev/magic (Hero con stagger de texto, grilla de pricing con tarjeta destacada) se usaron como referencia estructural/de interacción y se reimplementaron a mano con los tokens de FaroDev, no se copiaron tal cual (vienen en Tailwind/shadcn, stack que este proyecto no usa).
+**Cómo aplica:** `web/src/components/*` usa `motion.*` de `framer-motion` para todas las animaciones (reveal-on-scroll vía `whileInView`, header oculto/visible, hover nudge del CTA, zoom de imágenes del portafolio, transición del menú móvil y del lightbox) - ninguna animación CSS a mano, como pide `TOOLS.md`. Los tokens de `DESIGN.md` se reutilizan tal cual copiando `css/tokens.css` a `web/src/styles/tokens.css`, sin redecidir paleta ni tipografía. Los componentes de 21st.dev/magic (Hero con stagger de texto, grilla de pricing con tarjeta destacada) se usaron como referencia estructural/de interacción y se reimplementaron a mano con los tokens de FaroDevs, no se copiaron tal cual (vienen en Tailwind/shadcn, stack que este proyecto no usa).
 
 ---
 

@@ -8,19 +8,19 @@ web
 
 ## Stack
 
-React + Vite (proyecto fuente en `/web`), compilado a HTML/CSS/JS estático que se sirve desde la raíz del repo (sin backend, sin WordPress) - GitHub Pages sigue sirviendo archivos planos, el build solo pasó a generarse con un bundler en vez de escribirse a mano. Se adoptó este stack para poder usar Framer Motion (animaciones) y el catálogo de componentes de 21st.dev/magic, ambos de React (ver `TOOLS.md` y `docs/decisions.md`, entradas del 2026-09-17). La versión estática original sin build step (HTML/CSS/JS plano) queda archivada en `archive/index-v1.html` como referencia histórica, ya no es el sitio publicado. (WordPress sí se ofrece como opción de paquete para clientes de FaroDev que necesiten autonomía de contenido, pero eso es un servicio distinto, no el stack de este sitio.)
+React + Vite (proyecto fuente en `/web`), compilado a HTML/CSS/JS estático que se sirve desde la raíz del repo (sin backend, sin WordPress) - GitHub Pages sigue sirviendo archivos planos, el build solo pasó a generarse con un bundler en vez de escribirse a mano. Se adoptó este stack para poder usar Framer Motion (animaciones) y el catálogo de componentes de 21st.dev/magic, ambos de React (ver `TOOLS.md` y `docs/decisions.md`, entradas del 2026-09-17). La versión estática original sin build step (HTML/CSS/JS plano) queda archivada en `archive/index-v1.html` como referencia histórica, ya no es el sitio publicado. (WordPress sí se ofrece como opción de paquete para clientes de FaroDevs que necesiten autonomía de contenido, pero eso es un servicio distinto, no el stack de este sitio.)
 
 ## Users
 
-Dueños de pymes peruanas (restaurantes, tiendas, bodegas, servicios profesionales, fotografía/video) que evalúan contratar a FaroDev para crear o mejorar su presencia web, y necesitan decidir rápido si confiar el proyecto y pedir una cotización.
+Dueños de pymes peruanas (restaurantes, tiendas, bodegas, servicios profesionales, fotografía/video) que evalúan contratar a FaroDevs para crear o mejorar su presencia web, y necesitan decidir rápido si confiar el proyecto y pedir una cotización.
 
 ## Product Purpose
 
-Sitio de portafolio y servicios de FaroDev (negocio de Franco Reategui) para captar leads de pymes peruanas vía WhatsApp. Éxito = visitante entiende los paquetes/precios, confía en la capacidad técnica del equipo y escribe por WhatsApp para pedir cotización.
+Sitio de portafolio y servicios de FaroDevs (negocio de Franco Reategui) para captar leads de pymes peruanas vía WhatsApp. Éxito = visitante entiende los paquetes/precios, confía en la capacidad técnica del equipo y escribe por WhatsApp para pedir cotización.
 
 ## Positioning
 
-FaroDev no es "otro diseñador de páginas bonitas": construye sistemas de software reales (ERPs, POS, integración de facturación electrónica SUNAT) con .NET/EF Core/SQL Server, y aplica esa capacidad técnica a sitios para pymes. El argumento diferencial es la profundidad técnica detrás del negocio, evidenciada por AxionOne (POS multi-tenant propio con integración SUNAT).
+FaroDevs no es "otro diseñador de páginas bonitas": construye sistemas de software reales (ERPs, POS, integración de facturación electrónica SUNAT) con .NET/EF Core/SQL Server, y aplica esa capacidad técnica a sitios para pymes. El argumento diferencial es la profundidad técnica detrás del negocio, evidenciada por AxionOne (POS multi-tenant propio con integración SUNAT).
 
 ## Operating Context
 
@@ -34,24 +34,24 @@ FaroDev no es "otro diseñador de páginas bonitas": construye sistemas de softw
 ## Capabilities and Constraints
 
 - Nicho de servicio: general, no exclusivo - restaurantes, tiendas, bodegas, servicios de fotografía/video y otros negocios locales.
-- Dominio objetivo: farodev.pe (verificado disponible en Punto.pe, pendiente de registrar). farodev.com no está disponible. Alternativa considerada: farodev.dev.
+- Dominio: farodevs.com (adquirido).
 - Testimonios reales: no existen aún: la sección de testimonios debe mostrarse como placeholder ("Pronto encontrarás aquí las historias de nuestros clientes"), nunca inventados.
-- Pendiente de definir: hosting del sitio propio de FaroDev.
+- Pendiente de definir: hosting del sitio propio de FaroDevs.
 
 ## Brand Commitments
 
-- Nombre: FaroDev, marca de Franco Reategui.
+- Nombre: FaroDevs, marca de Franco Reategui.
 - Tono: cercano y directo; confianza técnica sin sonar corporativo/distante.
 - Voz de escritura: español neutro peruano con tuteo ("tú"), nunca voseo; sin guion largo (em dash) en ningún texto, usar guion corto.
-- Wordmark: "FaroDev" - "Faro" en navy, "Dev" en coral (modo claro) o teal (modo oscuro).
+- Wordmark: "FaroDevs" - "Faro" en navy, "Dev" en coral (modo claro) o teal (modo oscuro).
 - Símbolo de marca: figura abstracta tipo flecha/compás dividida diagonalmente (navy con doble "pata" en la base / triángulo coral), generada con Gemini. Existe como PNG; el SVG final todavía no está vectorizado. Mientras tanto, usar un placeholder SVG simple basado en esta descripción, o solo el wordmark en Archivo 900.
 - Referencia de layout aceptada por el usuario: smultron.software (tono cercano/directo, estructura hero con CTA píldora + servicios en tarjetas + casos de estudio + contacto directo) - se replica el layout sin usar WordPress.
 
 ## Evidence on Hand
 
-- **AxionOne** (caso de estudio con evidencia técnica completa, confirmado): POS multi-tenant para restaurantes, producto propio de FaroDev. Problema: restaurantes necesitaban un punto de venta que cumpliera con facturación electrónica SUNAT y manejara múltiples locales desde un solo sistema. Solución: POS en .NET 10 + EF Core, frontend híbrido Razor/React, integración SUNAT (UBL 2.1), gestión multi-local.
+- **AxionOne** (caso de estudio con evidencia técnica completa, confirmado): POS multi-tenant para restaurantes, producto propio de FaroDevs. Problema: restaurantes necesitaban un punto de venta que cumpliera con facturación electrónica SUNAT y manejara múltiples locales desde un solo sistema. Solución: POS en .NET 10 + EF Core, frontend híbrido Razor/React, integración SUNAT (UBL 2.1), gestión multi-local.
 - **Ícono Creativo** (portafolio, sin el mismo nivel de detalle técnico que AxionOne): sitio para productora audiovisual, enfoque visual/creativo con portafolio y galería, incluye gestión de redes sociales.
-- **Negocio local de ejemplo** ("La Caleta Cevichería", construido y publicado en https://francoo25.github.io/la-caleta-cevicheria/): página tipo restaurante con menú, ubicación y WhatsApp directo. Portafolio de FaroDev ya muestra captura real con enlace al sitio.
+- **Negocio local de ejemplo** ("La Caleta Cevichería", construido y publicado en https://francoo25.github.io/la-caleta-cevicheria/): página tipo restaurante con menú, ubicación y WhatsApp directo. Portafolio de FaroDevs ya muestra captura real con enlace al sitio.
 - **Pendiente:** proyecto de ejemplo en WordPress para respaldar la opción de servicio en WordPress (aún no existe).
 - **Pendiente:** construir Ícono Creativo (en pausa hasta recibir logo, tipografía y prototipo de la marca real).
 
@@ -59,6 +59,6 @@ FaroDev no es "otro diseñador de páginas bonitas": construye sistemas de softw
 
 1. La confianza se gana mostrando capacidad técnica real (sistemas de negocio, no solo plantillas), no solo diseño visual.
 2. El contacto debe ser de fricción mínima: WhatsApp directo como CTA principal, con calificación breve del tipo de negocio.
-3. El sitio propio de FaroDev debe ser simple de mantener (estático, sin panel de terceros) mientras se ofrece WordPress solo como servicio para clientes que sí lo necesitan.
+3. El sitio propio de FaroDevs debe ser simple de mantener (estático, sin panel de terceros) mientras se ofrece WordPress solo como servicio para clientes que sí lo necesitan.
 4. La transparencia de precios y plazos por paquete reduce fricción de decisión para pymes con presupuesto ajustado.
 5. Nunca fabricar evidencia: testimonios y casos sin desarrollar se marcan como placeholder o con menor nivel de detalle, en vez de inventar contenido.

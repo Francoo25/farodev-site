@@ -10,10 +10,10 @@ export default function About() {
         </Reveal>
         <Reveal as="div">
           <h2 className={styles.heading}>
-            Sobre <span>FaroDev</span>
+            Sobre <span>FaroDevs</span>
           </h2>
           <p className={styles.copy}>
-            Somos FaroDev, un equipo de desarrollo de software especializado en crear soluciones digitales
+            Somos FaroDevs, un equipo de desarrollo de software especializado en crear soluciones digitales
             para negocios peruanos. No solo hacemos páginas web bonitas: construimos sistemas reales, como
             AxionOne, nuestro propio punto de venta para restaurantes. Esa experiencia técnica la ponemos al
             servicio de tu negocio.

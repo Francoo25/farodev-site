@@ -33,10 +33,10 @@ export default function Header() {
       transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
     >
       <div className={`wrap ${styles.inner}`}>
-        <a className={styles.brand} href="#top" aria-label="FaroDev, inicio">
+        <a className={styles.brand} href="#top" aria-label="FaroDevs, inicio">
           <img className={styles.brandMark} src={`${import.meta.env.BASE_URL}assets/img/logo/farodev-symbol.svg`} alt="" width="34" height="34" />
           <span className={styles.brandWord}>
-            Faro<em>Dev</em>
+            Faro<em>Devs</em>
           </span>
         </a>
 

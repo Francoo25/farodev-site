@@ -76,7 +76,7 @@
 
 .deviceFront {
   top: 34%;
-  left: -12%;
+  left: 0;
   transform: rotate(-3deg);
   z-index: 2;
 }

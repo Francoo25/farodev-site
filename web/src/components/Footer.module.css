@@ -30,6 +30,7 @@
 
 .nav {
   display: flex;
+  flex-wrap: wrap;
   gap: var(--space-md);
   margin-inline-start: auto;
   font-size: var(--text-body-sm);

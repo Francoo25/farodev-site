@@ -1,4 +1,4 @@
-# FaroDev - Qué herramienta usar y cuándo
+# FaroDevs - Qué herramienta usar y cuándo
 
 Este archivo documenta qué herramienta/skill instalada usar para cada tipo de tarea de desarrollo, para no dejarlo a criterio libre de futuras sesiones. Es sobre el **"cómo"** (con qué herramienta se construye cada cosa); el **"qué"** del proyecto (negocio, marca, sistema de diseño, decisiones) sigue viviendo en `STATUS.md`, `PRODUCT.md` y `DESIGN.md` - este archivo no los reemplaza ni los modifica.
 
@@ -48,6 +48,6 @@ Cuando el usuario pasa un sitio de referencia para reproducir un patrón de inte
 
 1. **Playwright** - estudiar la interacción real del sitio de referencia (scroll-through, inspección de CSS/JS en vivo).
 2. **Framer Motion skill** - reproducir el patrón encontrado con la skill, nunca copiando el código ajeno tal cual.
-3. **UI/UX Pro Max** - filtrar el resultado para que encaje con la identidad de FaroDev (Navy Profundo, Verde Brújula, Coral Señal) en vez de quedarse con la marca/paleta original de la referencia.
+3. **UI/UX Pro Max** - filtrar el resultado para que encaje con la identidad de FaroDevs (Navy Profundo, Verde Brújula, Coral Señal) en vez de quedarse con la marca/paleta original de la referencia.
 
 Ningún paso se salta ni se invierte el orden.

@@ -6,10 +6,10 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={`wrap ${styles.inner}`}>
-        <a className={styles.brand} href="#top" aria-label="FaroDev, inicio">
+        <a className={styles.brand} href="#top" aria-label="FaroDevs, inicio">
           <img src={`${import.meta.env.BASE_URL}assets/img/logo/farodev-symbol.svg`} alt="" width="28" height="28" />
           <span className={styles.brandWord}>
-            Faro<em>Dev</em>
+            Faro<em>Devs</em>
           </span>
         </a>
         <nav className={styles.nav}>
@@ -18,7 +18,7 @@ export default function Footer() {
           <a href="#nosotros">Nosotros</a>
           <a href="#contacto">Contacto</a>
         </nav>
-        <p className={styles.copy}>&copy; {year} FaroDev &middot; Perú</p>
+        <p className={styles.copy}>&copy; {year} FaroDevs &middot; Perú</p>
       </div>
     </footer>
   )

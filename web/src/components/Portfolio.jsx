@@ -48,7 +48,7 @@ export default function Portfolio() {
             </motion.button>
           </div>
           <div className={styles.caseBody}>
-            <p className={styles.caseLabel}>Producto propio de FaroDev</p>
+            <p className={styles.caseLabel}>Producto propio de FaroDevs</p>
             <h3>AxionOne</h3>
             <p>Sistema de punto de venta para restaurantes, con facturación electrónica integrada y gestión multi-local.</p>
             <ul className={styles.caseTags}>

@@ -1,18 +1,18 @@
-# FaroDev - Estado del proyecto
+# FaroDevs - Estado del proyecto
 
 Documento único de referencia con toda la información del proyecto: negocio, stack, diseño, decisiones tomadas, historial de cambios, pendientes y herramientas/skills usadas para construirlo. Consolida `README.md`, `PRODUCT.md`, `DESIGN.md`, `docs/brief.md`, `docs/decisions.md` y `docs/changelog.md` - esos archivos siguen siendo la fuente de verdad detallada de cada tema; este es el resumen de un vistazo.
 
-Última actualización: 2026-09-17.
+Última actualización: 2026-09-21.
 
 ---
 
 ## 1. Qué es
 
-Sitio de portafolio y servicios de **FaroDev**, negocio de Franco Reategui dedicado a crear páginas web para pymes peruanas (restaurantes, tiendas, bodegas, servicios profesionales, fotografía/video). Objetivo del sitio: que el visitante entienda los paquetes/precios, confíe en la capacidad técnica del equipo y escriba por WhatsApp para pedir cotización.
+Sitio de portafolio y servicios de **FaroDevs**, negocio de Franco Reategui dedicado a crear páginas web para pymes peruanas (restaurantes, tiendas, bodegas, servicios profesionales, fotografía/video). Objetivo del sitio: que el visitante entienda los paquetes/precios, confíe en la capacidad técnica del equipo y escriba por WhatsApp para pedir cotización.
 
 **Publicado en:** https://francoo25.github.io/farodev-site/
 
-**Posicionamiento:** FaroDev no es "otro diseñador de páginas bonitas" - construye sistemas de software reales (ERPs, POS, integración de facturación electrónica SUNAT) con .NET/EF Core/SQL Server, y aplica esa capacidad técnica a sitios para pymes. El argumento diferencial es AxionOne, el POS propio con integración SUNAT.
+**Posicionamiento:** FaroDevs no es "otro diseñador de páginas bonitas" - construye sistemas de software reales (ERPs, POS, integración de facturación electrónica SUNAT) con .NET/EF Core/SQL Server, y aplica esa capacidad técnica a sitios para pymes. El argumento diferencial es AxionOne, el POS propio con integración SUNAT.
 
 ---
 
@@ -34,13 +34,13 @@ Sitio de portafolio y servicios de **FaroDev**, negocio de Franco Reategui dedic
 - **Contacto:** WhatsApp directo, con mini-calificador de leads ("¿qué tipo de negocio tienes?") antes de derivar.
 - **WordPress:** se ofrece como opción/add-on para clientes que necesitan editar su propio contenido seguido (menús, precios, productos), típicamente restaurantes y tiendas - no es el default.
 
-**Usuarios objetivo:** dueños de pymes peruanas evaluando si contratar a FaroDev y pedir una cotización.
+**Usuarios objetivo:** dueños de pymes peruanas evaluando si contratar a FaroDevs y pedir una cotización.
 
 ---
 
 ## 3. Stack técnico
 
-**Sitio propio de FaroDev:** React + Vite + Framer Motion (proyecto fuente en `/web`), compilado a HTML/CSS/JS estático que se publica desde la raíz del repo - sigue sin backend ni WordPress, solo cambió de "escrito a mano" a "compilado con un bundler" para poder usar Framer Motion y componentes de 21st.dev/magic (ver `TOOLS.md`). La versión anterior sin build step queda archivada como referencia histórica (sección 7).
+**Sitio propio de FaroDevs:** React + Vite + Framer Motion (proyecto fuente en `/web`), compilado a HTML/CSS/JS estático que se publica desde la raíz del repo - sigue sin backend ni WordPress, solo cambió de "escrito a mano" a "compilado con un bundler" para poder usar Framer Motion y componentes de 21st.dev/magic (ver `TOOLS.md`). La versión anterior sin build step queda archivada como referencia histórica (sección 7).
 
 El sitio se publica como GitHub Pages de **proyecto** (`https://francoo25.github.io/farodev-site/`, no dominio raíz ni custom domain), así que `base` en `web/vite.config.js` está fijado a `/farodev-site/` y todas las rutas a imágenes usan `import.meta.env.BASE_URL` en vez de rutas absolutas `/assets/...` - si se sirve alguna vez desde un dominio propio o subpath distinto, este valor hay que actualizarlo (ver `docs/decisions.md`).
 
@@ -92,7 +92,7 @@ farodev-site/
 
 ## 4. Identidad visual
 
-**Creative North Star: "El Compás Técnico"** - FaroDev se presenta como un compás, no como un vitrinero de plantillas. El sistema visual traduce precisión técnica real en una superficie cercana y sin pretensiones corporativas.
+**Creative North Star: "El Compás Técnico"** - FaroDevs se presenta como un compás, no como un vitrinero de plantillas. El sistema visual traduce precisión técnica real en una superficie cercana y sin pretensiones corporativas.
 
 ### Colores
 
@@ -128,7 +128,7 @@ farodev-site/
 ### Logo
 
 - Símbolo abstracto tipo flecha/compás dividido diagonalmente (navy con doble "pata" en la base / triángulo coral), generado con Gemini. Existe como PNG; el SVG final aún no está vectorizado.
-- Wordmark "FaroDev": "Faro" en navy, "Dev" en coral (modo claro) o teal (modo oscuro).
+- Wordmark "FaroDevs": "Faro" en navy, "Dev" en coral (modo claro) o teal (modo oscuro).
 
 ---
 
@@ -146,7 +146,7 @@ Regla de producto: **nunca fabricar evidencia** - testimonios y casos sin desarr
 ## 6. Historial de cambios (changelog)
 
 **2026-09-16 - Primera versión del sitio**
-- Construido el sitio completo de una sola página: Hero, Servicios, Portafolio, Sobre FaroDev, Testimonios, Contacto.
+- Construido el sitio completo de una sola página: Hero, Servicios, Portafolio, Sobre FaroDevs, Testimonios, Contacto.
 - Selector de tipo de negocio en Contacto que arma un mensaje de WhatsApp prellenado.
 - Menú móvil con CTA de WhatsApp incluido.
 - Reveal-on-scroll con fallback visible sin JavaScript.
@@ -185,6 +185,19 @@ Regla de producto: **nunca fabricar evidencia** - testimonios y casos sin desarr
 - Agregada la animación de flecha (hover nudge, Framer Motion) al CTA "Cotización gratis" del header y del menú móvil - antes no tenían ícono ni ningún feedback de interacción, a diferencia del CTA del hero.
 - Todo verificado con Playwright en desktop/tablet/mobile (1600px, 900px, 390px) antes de cada confirmación, siguiendo la regla de `TOOLS.md` de usar Playwright para cualquier navegación/inspección real, no solo capturas estáticas.
 
+**2026-09-21 - Rebranding a FaroDevs, dominio, SEO y hosting en Vercel**
+- Renombrada la marca de "FaroDev" a "FaroDevs" en todo el código fuente (`web/src`) y la documentación del proyecto, incluyendo el wordmark partido en Header/Footer (`Faro<em>Devs</em>`) que un primer reemplazo de texto por sí solo no cubría.
+- Dominio `farodevs.com` adquirido (reemplaza la evaluación original de `farodev.pe`, documentada como histórica en `docs/brief.md`).
+- Actualizado el número de WhatsApp a `+51 943 402 701` (constante única en `web/src/data/content.js`, usada por Header, Hero y Contact).
+- Agregadas etiquetas SEO/Open Graph a `web/index.html`: `canonical`, `robots`, `og:*` y `twitter:*`, apuntando a `https://farodevs.com/` (a futuro, cuando el DNS apunte ahí) con `logo_farodev.png` como imagen de preview.
+- `web/vite.config.js` ahora soporta dos destinos de build sin mantener configs separadas a mano: detecta `process.env.VERCEL` (variable que Vercel define automáticamente en sus builds) para usar `base: '/'` + `outDir: 'dist'` ahí, y mantiene `base: '/farodev-site/'` + build a la raíz del repo para GitHub Pages. Verificado localmente simulando `VERCEL=1`.
+- Conectada la app de Vercel al repo de GitHub (`Francoo25/farodev-site`, acceso restringido solo a ese repo) para deploy automático; pendiente completar el import del proyecto y apuntar el DNS de `farodevs.com`.
+- **3 bugs de responsive encontrados y corregidos, verificados con Playwright (bounding boxes exactos, no solo capturas):**
+  - El mockup del hero (`.deviceFront`, `left: -12%`) se salía del viewport en pantallas angostas, lo que expandía el "layout viewport" del navegador y rompía `position: fixed` en toda la página (el lightbox del portafolio aparecía desplazado y descentrado en mobile). Fix: agregado `overflow-x: hidden` en `html`/`body` (`web/src/styles/global.css`) y cambiado `.deviceFront` de `left: -12%` a `left: 0` para que el conjunto de tarjetas quede contenido y centrado en vez de recortado contra el borde de pantalla (antes de este segundo fix, el `overflow-x: hidden` por sí solo dejaba la tarjeta "cortada" en el borde en vez de desbordada de forma invisible).
+  - El header cambiaba a modo escritorio (nav completo + botón CTA) desde `760px`, pero ese contenido necesita ~800px reales para entrar; entre 760-899px el wordmark "FaroDevs" se comprimía por debajo del ancho de su propio texto y se desbordaba visualmente sobre "Servicios". Fix: subido el breakpoint de `Header.module.css` a `900px`, igualándolo al que ya usa el Hero.
+  - El `<nav>` del footer (4 links) no tenía `flex-wrap`, así que a 320px se desbordaba 51px fuera de la pantalla en vez de acomodarse en más de una línea. Fix: agregado `flex-wrap: wrap` en `Footer.module.css`.
+- Auditados los 7 breakpoints del sitio (`640`, `760`, `900`px) en 13 anchos de 320 a 1440px sin desborde horizontal real restante (el único "offender" detectado en todos los anchos es el `.skip-link` de accesibilidad, oculto fuera de pantalla a propósito hasta recibir foco).
+
 ---
 
 ## 7. Decisiones técnicas relevantes (el "por qué")
@@ -205,9 +218,10 @@ Regla de producto: **nunca fabricar evidencia** - testimonios y casos sin desarr
 
 ## 8. Pendientes
 
-- [ ] Registrar dominio `farodev.pe` (disponible en Punto.pe, verificado).
+- [x] Dominio `farodevs.com` adquirido.
+- [ ] Completar el import del proyecto en Vercel (root directory `web`, output `dist`) y conectar `farodevs.com` (registros DNS A/CNAME según indique Vercel).
+- [ ] Verificar propiedad del dominio en Google Search Console (registro TXT) y pedir indexación una vez el DNS apunte a Vercel.
 - [ ] Vectorizar el símbolo del logo (SVG limpio a partir del PNG generado con Gemini).
-- [ ] Definir dónde irá el hosting del sitio propio de FaroDev.
 - [ ] Recopilar screenshots reales de Ícono Creativo (proyecto en pausa hasta recibir assets de marca del cliente).
 - [ ] Armar/recopilar un proyecto de ejemplo en WordPress para respaldar esa opción de servicio en el portafolio.
 
@@ -229,7 +243,7 @@ Archivos de configuración de la skill en el repo: `.impeccable/config.json` (re
 
 **Reconstrucción con React + Vite (2026-09-17, siguiendo `TOOLS.md`):**
 
-- **21st.dev/magic** (MCP) - referencia estructural/de interacción para el Hero (stagger de texto) y la grilla de pricing (tarjeta destacada), reimplementados a mano con los tokens de FaroDev en vez de copiar el Tailwind/shadcn original.
+- **21st.dev/magic** (MCP) - referencia estructural/de interacción para el Hero (stagger de texto) y la grilla de pricing (tarjeta destacada), reimplementados a mano con los tokens de FaroDevs en vez de copiar el Tailwind/shadcn original.
 - **Framer Motion** - toda la animación del sitio: reveal-on-scroll, header oculto/visible, hover nudge del CTA, subrayado del nav (`scaleX`, no `width`, para evitar layout thrash), zoom del portafolio, menú móvil, lightbox.
 - **UI/UX Pro Max** - no redecide paleta/tipografía (ya definidas en `DESIGN.md`), se usó para aplicar consistentemente los tokens existentes a los componentes nuevos.
 - **Playwright** - usado dos veces con fines distintos: (1) verificación funcional/visual de cada cambio (navegación real, capturas, chequeo de bounding boxes y errores de consola - así se encontraron y corrigieron todos los bugs reales de esta ronda); (2) inspección de smultron.software para medir su ancho de contenedor real (`max-width: 1632px`, `padding: 48px`) antes de ajustar el `.wrap` del sitio.

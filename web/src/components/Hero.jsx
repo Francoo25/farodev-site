@@ -5,7 +5,7 @@ import styles from './Hero.module.css'
 
 // Patrón de stagger de texto + CTA inspirado en el componente "Hero Section"
 // de 21st.dev (staggerChildren + fade/translateY), adaptado a los tokens de
-// FaroDev en vez del look oscuro/SaaS genérico del original.
+// FaroDevs en vez del look oscuro/SaaS genérico del original.
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: { opacity: 1, transition: { staggerChildren: 0.15, delayChildren: 0.1 } },

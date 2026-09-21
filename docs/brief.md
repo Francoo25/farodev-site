@@ -1,9 +1,9 @@
-# FaroDev — Brief de proyecto
+# FaroDevs — Brief de proyecto
 
-Sitio web de portafolio y servicios para FaroDev, negocio de creación de
+Sitio web de portafolio y servicios para FaroDevs, negocio de creación de
 páginas web para pymes peruanas (restaurantes, tiendas, bodegas, servicios
 profesionales, fotografía/video). Marca de Franco Reategui, operada bajo
-FaroDev.
+FaroDevs.
 
 ---
 
@@ -32,7 +32,7 @@ deploy; si no, se ofrece como parte del paquete o add-on aparte.
 
 Dos contextos distintos, con decisiones separadas:
 
-### 2.1 Sitio propio de FaroDev (este proyecto)
+### 2.1 Sitio propio de FaroDevs (este proyecto)
 - **HTML/CSS/JS simple** (o un stack ligero tipo React/Next si conviene
   para mantenimiento) — **no WordPress**.
 - Razón: es un sitio de una sola marca, sin necesidad de que terceros
@@ -61,12 +61,14 @@ Dos contextos distintos, con decisiones separadas:
 
 ---
 
-## 3. Dominio de FaroDev
+## 3. Dominio de FaroDevs
 
-- **farodev.pe** — disponible, verificado en Punto.pe (S/ 110/año, 1 año;
-  opciones hasta 5 años a S/ 465). Pendiente de registrar.
-- farodev.com — no disponible (ya registrado por terceros).
-- Alternativa considerada si hiciera falta: farodev.dev.
+- **Actualización:** se adquirió **farodevs.com**. Queda como dominio oficial del sitio.
+- Evaluación original (histórica, referencia):
+  - farodev.pe — disponible, verificado en Punto.pe (S/ 110/año, 1 año;
+    opciones hasta 5 años a S/ 465). Pendiente de registrar.
+  - farodev.com — no disponible (ya registrado por terceros).
+  - Alternativa considerada si hiciera falta: farodev.dev.
 
 ---
 
@@ -90,7 +92,7 @@ Dos contextos distintos, con decisiones separadas:
    proyectos destacados.
 2. **Servicios** — los 3 paquetes con precios y mantenimiento mensual.
 3. **Portafolio** — tarjetas de AxionOne, Ícono Creativo, negocio local.
-4. **Sobre FaroDev** — quién es Franco, experiencia en desarrollo de
+4. **Sobre FaroDevs** — quién es Franco, experiencia en desarrollo de
    software (no solo plantillas).
 5. **Testimonios** — placeholder hasta tener clientes reales.
 6. **Contacto** — formulario simple + WhatsApp directo, con
@@ -119,7 +121,7 @@ Dos contextos distintos, con decisiones separadas:
     visual y gestión de redes sociales."
   - Negocio local: "Página para negocio local con menú, ubicación y
     contacto directo por WhatsApp."
-- **Sobre FaroDev:** "Somos FaroDev, un equipo de desarrollo de software
+- **Sobre FaroDevs:** "Somos FaroDevs, un equipo de desarrollo de software
   especializado en crear soluciones digitales para negocios peruanos. No
   solo hacemos páginas web bonitas: construimos sistemas reales, como
   AxionOne, nuestro propio punto de venta para restaurantes. Esa
@@ -176,7 +178,7 @@ fondo coral o teal — nunca texto blanco sobre esos colores (falla WCAG AA).
   (triángulo derecho), separadas por una línea blanca fina. Generado con
   Gemini a partir de un prompt iterativo (ver historial de la
   conversación para el prompt exacto si se necesita regenerar).
-- **Wordmark:** "FaroDev" en Archivo 900 — "Faro" en navy, "Dev" en coral
+- **Wordmark:** "FaroDevs" en Archivo 900 — "Faro" en navy, "Dev" en coral
   (modo claro) o en teal (modo oscuro).
 - **Lockups:** horizontal (símbolo + texto en línea) y apilado (símbolo
   arriba, texto abajo) para contextos cuadrados/redes sociales.
@@ -234,9 +236,9 @@ farodev-site/
 
 ## 9. Pendientes antes/durante el desarrollo
 
-- [ ] Registrar farodev.pe
+- [x] Dominio `farodevs.com` adquirido.
 - [ ] Vectorizar el logo final (SVG limpio a partir del PNG de Gemini)
-- [ ] Definir dónde irá el hosting del sitio de FaroDev mismo
+- [ ] Definir dónde irá el hosting del sitio de FaroDevs mismo y apuntar `farodevs.com`
 - [ ] Recopilar screenshots reales de AxionOne e Ícono Creativo para el
       portafolio
 - [ ] Armar/recopilar un proyecto de ejemplo en WordPress para el

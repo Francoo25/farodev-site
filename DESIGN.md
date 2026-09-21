@@ -1,6 +1,6 @@
 ---
-name: FaroDev
-description: Sitio de portafolio y servicios para FaroDev, desarrollo web para pymes peruanas
+name: FaroDevs
+description: Sitio de portafolio y servicios para FaroDevs, desarrollo web para pymes peruanas
 colors:
   navy-profundo: "#0e2340"
   navy-profundo-soft: "#16345c"
@@ -79,13 +79,13 @@ components:
     padding: "2.5rem"
 ---
 
-# Design System: FaroDev
+# Design System: FaroDevs
 
 ## Overview
 
 **Creative North Star: "El Compás Técnico"**
 
-FaroDev se presenta como un compás, no como un vitrinero de plantillas: el sistema visual traduce precisión técnica real (sistemas de negocio, integraciones fiscales) en una superficie cercana y sin pretensiones corporativas. El navy profundo ancla el sistema con autoridad y legibilidad; el coral funciona como una única señal de acción clara en cada pantalla, nunca como decoración repetida. Las formas son suaves y redondeadas (nunca angulosas ni neobrutalistas), porque la confianza técnica no necesita sonar fría.
+FaroDevs se presenta como un compás, no como un vitrinero de plantillas: el sistema visual traduce precisión técnica real (sistemas de negocio, integraciones fiscales) en una superficie cercana y sin pretensiones corporativas. El navy profundo ancla el sistema con autoridad y legibilidad; el coral funciona como una única señal de acción clara en cada pantalla, nunca como decoración repetida. Las formas son suaves y redondeadas (nunca angulosas ni neobrutalistas), porque la confianza técnica no necesita sonar fría.
 
 El sistema rechaza explícitamente: gradientes de texto, íconos genéricos tipo emoji, kickers/eyebrows sobre títulos, y cualquier imitación de screenshot real donde no existe evidencia real todavía (los huecos de portafolio se marcan como pendientes, nunca se simulan).
 
@@ -155,7 +155,7 @@ Sistema de sombras suaves con offset y blur amplio (nunca halos de offset cero).
 
 ### Shadow Vocabulary
 - **sm** (`0 2px 8px rgba(14,35,64,0.06)`): botones en reposo.
-- **md** (`0 8px 24px rgba(14,35,64,0.1)`): hover de botón, panel de menú móvil abierto, ícono "Sobre FaroDev".
+- **md** (`0 8px 24px rgba(14,35,64,0.1)`): hover de botón, panel de menú móvil abierto, ícono "Sobre FaroDevs".
 - **lg** (`0 20px 48px rgba(14,35,64,0.16)`): tarjeta de precio destacada, mockups flotantes del hero - la elevación más alta se reserva para lo que ya es visualmente el foco de la sección.
 
 ### Named Rules
@@ -163,7 +163,7 @@ Sistema de sombras suaves con offset y blur amplio (nunca halos de offset cero).
 
 ## Shapes
 
-Esquinas consistentemente redondeadas: `10px` en controles pequeños, `16px` en tarjetas, `24px` en superficies grandes (tarjeta destacada, mockups del hero, contenedor "Sobre FaroDev"), `999px` (pill) en botones y chips. Sin bordes duros ni esquinas vivas en ningún componente - la geometría siempre comunica cercanía, nunca angularidad corporativa.
+Esquinas consistentemente redondeadas: `10px` en controles pequeños, `16px` en tarjetas, `24px` en superficies grandes (tarjeta destacada, mockups del hero, contenedor "Sobre FaroDevs"), `999px` (pill) en botones y chips. Sin bordes duros ni esquinas vivas en ningún componente - la geometría siempre comunica cercanía, nunca angularidad corporativa.
 
 ## Components
 

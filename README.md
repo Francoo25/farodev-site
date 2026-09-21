@@ -1,6 +1,6 @@
-# FaroDev
+# FaroDevs
 
-Sitio de portafolio y servicios de FaroDev: desarrollo web para pymes peruanas (restaurantes, tiendas, bodegas, servicios profesionales, fotografía/video).
+Sitio de portafolio y servicios de FaroDevs: desarrollo web para pymes peruanas (restaurantes, tiendas, bodegas, servicios profesionales, fotografía/video).
 
 ## Correrlo
 
@@ -33,7 +33,7 @@ farodev-site/
 │       ├── styles/            → tokens.css (copia de DESIGN.md) + global.css
 │       └── data/content.js    → copy y datos reutilizados entre componentes
 ├── assets/img/
-│   ├── logo/            → símbolo y wordmark de FaroDev
+│   ├── logo/            → símbolo y wordmark de FaroDevs
 │   └── portfolio/       → screenshots reales del portafolio
 ├── archive/               → snapshot autocontenido de la versión anterior (HTML/CSS/JS plano, sin build step) - histórico, no se sirve
 ├── PRODUCT.md            → contexto de negocio, usuarios y posicionamiento

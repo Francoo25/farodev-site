@@ -1,6 +1,6 @@
-# FaroDev - proyecto fuente del home (React + Vite)
+# FaroDevs - proyecto fuente del home (React + Vite)
 
-Este es el proyecto fuente del home de FaroDev. Compila directamente a la raíz del repo (`../index.html` + `../bundle`), que es lo que se publica en GitHub Pages. Ver el [`README.md` de la raíz](../README.md) para el panorama completo.
+Este es el proyecto fuente del home de FaroDevs. Compila directamente a la raíz del repo (`../index.html` + `../bundle`), que es lo que se publica en GitHub Pages. Ver el [`README.md` de la raíz](../README.md) para el panorama completo.
 
 ## Comandos
 
